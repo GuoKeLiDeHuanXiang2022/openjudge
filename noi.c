@@ -68,3 +68,14 @@
 //	printf("%g\n", dou);
 //	return 0;
 //}
+
+//1.1.08
+int main()
+{
+	char ch = '0';
+	scanf("%c", &ch);
+	printf("%3c\n", ch);
+	printf("%2c%c%c\n", ch, ch, ch);
+	printf("%c%c%c%c%c", ch, ch, ch, ch, ch);
+	return 0;
+}
