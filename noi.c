@@ -35,3 +35,36 @@
 //	printf("%.3f", a);
 //	return 0;
 //}
+
+//1.1.05
+//int main()
+//{
+//	double dou = 0.0;
+//	scanf("%lf", &dou);
+//	printf("%.12lf\n", dou);
+//	return 0;
+//}
+
+//1.1.06
+//int main()
+//{
+//	char ch = '0';
+//	int num = 0;
+//	float fl = 0.0;
+//	double dou = 0.0;
+//	scanf("%c\n%d\n%f\n%lf", &ch, &num, &fl, &dou);
+//	printf("%c %d %.6f %.6lf", ch, num, fl, dou);
+//	return 0;
+//}
+
+//1.1.07
+//int main()
+//{
+//	double dou = 0.0;
+//	scanf("%lf", &dou);
+//	printf("%lf\n", dou);
+//	printf("%.5lf\n", dou);
+//	printf("%e\n", dou);
+//	printf("%g\n", dou);
+//	return 0;
+//}
