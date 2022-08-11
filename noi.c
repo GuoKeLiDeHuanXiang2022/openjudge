@@ -220,3 +220,60 @@
 //	printf("%d", sizeof(cha));
 //	return 0;
 //}
+
+//1.3.01
+//int add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	int A = 0;
+//	int B = 0;
+//	scanf("%d %d", &A, &B);
+//	int sum = add(A, B);
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.3.02
+//int c(int x, int y, int z)
+//{
+//	return (x + y) * z;
+//}
+//int main()
+//{
+//	int A = 0;
+//	int B = 0;
+//	int C = 0;
+//	scanf("%d %d %d", &A, &B, &C);
+//	int j = c(A, B, C);
+//	printf("%d", j);
+//	return 0;
+//}
+
+//1.3.03
+//int chh(int x, int y, int z)
+//{
+//	return (x + y) / z;
+//}
+//int main()
+//{
+//	int A = 0;
+//	int B = 0;
+//	int C = 0;
+//	scanf("%d %d %d", &A, &B, &C);
+//	int ch = chh(A, B, C);
+//	printf("%d", ch);
+//	return 0;
+//}
+
+//1.2.04
+int main()
+{
+	int A = 0;
+	int B = 0;
+	scanf("%d %d", &A, &B);
+	printf("%d %d", A / B,A % B);
+	return 0;
+}
