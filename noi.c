@@ -162,7 +162,37 @@
 //	return 0;
 //}
 
+//1.2.05
+//int main()
+//{
+//	double a = 1.000000001;
+//	float b = a;
+//	printf("%.9f %.9f\n", a, b);
+//	
+//	//提交的内容
+//	printf("F E");
+//
+//	return 0;
+//}
 
+//1.2.06
+//int main()
+//{
+//	float a = 0.0;
+//	scanf("%f", &a);
+//	int b = a;
+//	printf("%d", b);
+//	return 0;
+//}
+
+//1.2.07
+//int main()
+//{
+//	char cha = '0';
+//	scanf("%c", &cha);
+//	printf("%d", cha);
+//	return 0;
+//}
 
 //1.2.08
 //int main()
