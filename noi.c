@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 #include <stdio.h>
+#include <stdbool.h>
 
 //1.1.01
 //int main()
@@ -120,3 +121,36 @@
 //	printf("##########################################    ############                  ##############    ############");
 //	return 0;
 //}
+
+//1.2.01
+//int main()
+//{
+//	int a = 0;
+//	short b = '0';
+//	printf("%d %d", sizeof a, sizeof b);
+//	return 0;
+//}
+
+//1.2.02
+//int main()
+//{
+//	float a;
+//	double b;
+//	printf("%d %d", sizeof a, sizeof b);
+//	return 0;
+//}
+
+//1.2.03
+//int main()
+//{
+//	bool a;
+//	char b;
+//	printf("%d %d", sizeof a, sizeof b);
+//	return 0;
+//}
+
+//1.2.04
+int main()
+{
+
+}
