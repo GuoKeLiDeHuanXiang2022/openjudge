@@ -150,7 +150,43 @@
 //}
 
 //1.2.04
-int main()
-{
+//int main()
+//{
+//	int a = 32768;
+//	short b = a;
+//	printf("%d %d\n", a, b);
+//	
+//	//提交的内容
+//	printf("D C");
+//
+//	return 0;
+//}
 
-}
+
+
+//1.2.08
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	printf("%c", num);
+//	return 0;
+//}
+
+//1.2.09
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	bool b = num;
+//	printf("%d", b);
+//	return 0;
+//}
+
+//1.2.10
+//int main()
+//{
+//	char cha[] = "Hello, World!";
+//	printf("%d", sizeof(cha));
+//	return 0;
+//}
