@@ -300,3 +300,18 @@
 //	printf("%.3f%%", z);
 //	return 0;
 //}
+
+//1.3.07
+//double def(double x , double a, double b, double c, double d)
+//{
+//	//返回什么样的值 def前面就是什么类型!!!
+//	return a * x * x * x + b * x * x + c * x + d;
+//}
+//int main()
+//{
+//	double X, A, B, C, D;
+//	scanf("%lf %lf %lf %lf %lf", &X, &A, &B, &C, &D);
+//	double result = def(X, A, B, C, D);
+//	printf("%.7lf", result);
+//	return 0;
+//}
