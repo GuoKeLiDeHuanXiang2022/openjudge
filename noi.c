@@ -268,12 +268,35 @@
 //	return 0;
 //}
 
-//1.2.04
-int main()
-{
-	int A = 0;
-	int B = 0;
-	scanf("%d %d", &A, &B);
-	printf("%d %d", A / B,A % B);
-	return 0;
-}
+//1.3.04
+//int main()
+//{
+//	int A = 0;
+//	int B = 0;
+//	scanf("%d %d", &A, &B);
+//	printf("%d %d", A / B,A % B);
+//	return 0;
+//}
+
+//1.3.05
+//int main()
+//{
+//	double a = 0.0;
+//	double b = 0.0;
+//	double ch = 0.0;
+//	scanf("%lf %lf", &a, &b);
+//	ch = a / b;
+//	printf("%.9f", ch);
+//	return 0;
+//}
+
+//1.3.06
+//int main()
+//{
+//	float x = 0.0;
+//	float y = 0.0;
+//	scanf("%f %f", &x, &y);
+//	float z = y / x * 100;
+//	printf("%.3f%%", z);
+//	return 0;
+//}
