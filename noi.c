@@ -315,3 +315,54 @@
 //	printf("%.7lf", result);
 //	return 0;
 //}
+
+//1.3.08.01
+//int main()
+//{
+//	double F = 0.0;
+//	scanf("%lf", &F);
+//	double C = 5 * (F - 32) / 9;
+//	printf("%.5lf", C);
+//	return 0;
+//}
+
+//1.3.08.02
+//double def(double F)
+//{
+//	//函数定义参数时记得要加类型!!!
+//	return 5 * (F - 32) / 9;
+//}
+//int main()
+//{
+//	double f = 0.0;
+//	scanf("%lf", &f);
+//	double C = def(f);
+//	printf("%.5lf", C);
+//	return 0;
+//}
+
+//1.3.09
+//int main()
+//{
+//	double r = 0.0;
+//	double pi = 3.14159;
+//	scanf("%lf", &r);
+//	double d = 2 * r;
+//	double c = 2 * pi * r;
+//	double s = pi * r * r;
+//	printf("%.4lf %.4lf %.4lf", d, c, s);
+//	return 0;
+//}
+
+//1.3.10
+//int main()
+//{
+//	float r1 = 0;
+//	float r2 = 0;
+//	scanf("%f %f", &r1, &r2);
+//	float R = 1 / (1 / r1 + 1 / r2);
+//	printf("%.2f", R);
+//	return 0;
+//}
+
+//
