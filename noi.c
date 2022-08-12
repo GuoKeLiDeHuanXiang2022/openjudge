@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+
 
 //1.1.01
 //int main()
@@ -54,6 +56,7 @@
 //	float fl = 0.0;
 //	double dou = 0.0;
 //	scanf("%c\n%d\n%f\n%lf", &ch, &num, &fl, &dou);
+//	scanf("%c %d %f %lf", &ch, &num, &fl, &dou);
 //	printf("%c %d %.6f %.6lf", ch, num, fl, dou);
 //	return 0;
 //}
@@ -365,4 +368,99 @@
 //	return 0;
 //}
 
-//
+//1.3.11
+//int main()
+//{
+//	//引用头文件!!!
+//	double a = 0.0;
+//	double b = 0.0;
+//	int k = 0;
+//	scanf("%lf %lf", &a, &b);
+//	while (true)
+//	{
+//		if (a - k * b < b)
+//		{
+//			double result = a - k * b;
+//			printf("%g", result);
+//			break;
+//		}
+//		k++;
+//	}
+//	return 0;
+//}
+
+//1.3.12
+//double pi = 3.14;
+//double V(double R)
+//{
+//	//函数定义参数时记得要加类型!!!
+//	return (4.0 / 3.0)* pi * R * R * R;
+//}
+//int main()
+//{
+//	double r = 0.0;
+//	scanf("%lf", &r);
+//	double v = V(r);
+//	printf("%.2lf", v);
+//	return 0;
+//}
+
+//1.3.13
+//int main()
+//{
+//	char arr[3] = "0";  //可以开的很大
+//	scanf("%s", &arr);
+//	for (int i = 0; i <= 2; i++)
+//	{
+//		printf("%c", arr[2 - i]);
+//	}
+//	return 0;
+//}
+
+//1.3.14
+//float pi = 3.14159;
+//long v = 20000;
+//int def(float r, float h)
+//{
+//	float ve = pi * r * r * h;
+//	return v / ve;
+//}
+//int main()
+//{
+//	int R, H;
+//	scanf("%d %d", &H, &R);
+//	int num = def(R, H) + 1;
+//	printf("%d", num);
+//	return 0;
+//}
+
+//1.3.15
+//int main()
+//{
+//	int n, x, y;
+//	scanf("%d %d %d", &n, &x, &y);
+//	int s = y / x;
+//	if (y % x != 0)
+//	{
+//		s += 1;
+//	}
+//	int ss = n - s;
+//	printf("%d", ss);
+//	return 0;
+//}
+
+//1.3.16
+//int main()
+//{
+//	float ax, ay, bx, by;
+//	scanf("%f %f %f %f", &ax, &ay, &bx, &by);
+//	float z = sqrt((bx-ax) * (bx-ax) + (by-ay) * (by-ay));  //计算x开根号 包含头文件<math.h>
+// 	printf("%.3f", z); 
+//	return 0;
+//} 
+
+//1.3.17
+int main()
+{
+	
+}
