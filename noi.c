@@ -522,3 +522,23 @@
 //	printf("%d", result);
 //	return 0;
 //}
+
+//1.4.01
+//int main()
+//{
+//	int N = 0;
+//	scanf("%d", &N);
+//	if (N > 0)
+//	{
+//		printf("positive");
+//	}
+//	if (N == 0)
+//	{
+//		printf("zero");
+//	}
+//	if (N < 0)
+//	{
+//		printf("negative");
+//	}
+//	return 0;
+//}
