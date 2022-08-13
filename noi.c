@@ -460,7 +460,65 @@
 //} 
 
 //1.3.17
-int main()
-{
-	
-}
+//double distance(double ax, double ay, double bx, double by)
+//{
+//	double dis = sqrt((bx - ax) * (bx - ax) + (by - ay) * (by - ay));
+//	return dis;
+//}
+//double hailun(double a, double b, double c)
+//{
+//	double p = (a + b + c) / 2;
+//	double result = sqrt(p * (p - a) * (p - b) * (p - c));
+//	return result;
+//}
+//int main()
+//{
+//	double x1, y1, x2, y2, x3, y3;
+//	scanf("%lf %lf %lf %lf %lf %lf", &x1, &y1, &x2, &y2, &x3, &y3);
+//	double aa = distance(x1, y1, x2, y2);
+//	double bb = distance(x2, y2, x3, y3);
+//	double cc = distance(x1, y1, x3, y3);
+//	double results = hailun(aa, bb, cc);
+//	printf("%.2lf", results);
+//	return 0;
+//}
+
+//1.3.18
+//int main()
+//{
+//	int a1, a2, n;
+//	scanf("%d %d %d", &a1, &a2, &n);
+//	int d = a2 - a1;
+//	printf("%d", a1 + (n - 1) * d);
+//	return 0;
+//}
+
+//1.3.19.1
+//int main()
+//{
+//	unsigned int A, B;  //https://blog.csdn.net/weixin_43877387/article/details/118394375 https://baike.baidu.com/item/unsigned/8604216
+//	scanf("%u %u", &A, &B);
+//	printf("%u", A * B);
+//	return 0;
+//}
+
+//1.3.19.2
+//int main()
+//{
+//	long long int A, B;
+//	printf("%u", A * B);
+//	return 0;
+//}
+
+//1.3.20
+//int main()
+//{
+//	int a, i, result = 1;
+//	scanf("%d", &a);
+//	for (i = 1; i <= a; i++)
+//	{
+//		result *= 2;
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
