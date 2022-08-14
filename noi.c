@@ -526,7 +526,7 @@
 //1.4.01
 //int main()
 //{
-//	int N = 0;
+//	int N;
 //	scanf("%d", &N);
 //	if (N > 0)
 //	{
@@ -539,6 +539,306 @@
 //	if (N < 0)
 //	{
 //		printf("negative");
+//	}
+//	return 0;
+//}
+
+//1.4.02
+//int main()
+//{
+//	double dou;
+//	scanf("%lf", &dou);
+//	if (dou < 0)
+//	{
+//		dou = 0 - dou;
+//	}
+//	printf("%.2lf", dou);
+//	return 0;
+//}
+
+//1.4.03
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	if (num % 2 == 0)
+//	{
+//		printf("even");
+//	}
+//	if (num % 2 != 0)
+//	{
+//		printf("odd");
+//	}
+//	return 0;
+//}
+
+//1.4.04
+//int main()
+//{
+//	char ch;
+//	scanf("%c", &ch);
+//	int ASCI = ch;
+//	if (ASCI % 2 == 1)
+//	{
+//		printf("YES");
+//	}
+//	else
+//	{
+//		printf("NO");
+//	}
+//	return 0;
+//}
+
+//1.4.05
+//int main()  //https://blog.csdn.net/weixin_43877387/article/details/118455974
+//{
+//	long long  x;
+//	long long  y;
+//	scanf("%lld %lld", &x, &y);
+//	if (x > y)
+//	{
+//		printf(">");
+//	}
+//	if (x == y)
+//	{
+//		printf("=");
+//	}
+//	if (x < y)
+//	{
+//		printf("<");
+//	}
+//	return 0;
+//}
+
+//1.4.06
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	if (num >= 10 && num <= 99)
+//	{
+//		printf("1");
+//	}
+//	else
+//	{
+//		printf("0");
+//	}
+//	return 0;
+//}
+
+//1.4.07
+//int main()
+//{
+//	int luck, encourage = 0;
+//	scanf("%d %d", &luck, &encourage);
+//	if (luck >= 10 || encourage >= 20)
+//	{
+//		printf("1");
+//	}
+//	else
+//	{
+//		printf("0");
+//	}
+//	return 0;
+//}
+
+//1.4.08
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	if (num % 3 == 0 && num % 5 == 0)
+//	{
+//		printf("YES");
+//	}
+//	else
+//	{
+//		printf("NO");
+//	}
+//	return 0;
+//}
+
+//1.4.09
+//int main()
+//{
+//	int num,i = 0;
+//	
+//	scanf("%d", &num);
+//	if (num % 3 == 0)
+//	{
+//		printf("3");
+//		i++;
+//	}
+//	if (num % 5 == 0)
+//	{
+//		if (i != 0)
+//		{
+//			printf(" ");
+//		}
+//		printf("5");
+//		i++;
+//		
+//	}
+//	if (num % 7 == 0)
+//	{
+//		if (i != 0)
+//		{
+//			printf(" ");
+//		}
+//		printf("7");
+//		
+//	}
+//	if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0)
+//	{
+//		printf("n");
+//	}
+//	return 0;
+// } 
+
+//1.4.10
+//int main()
+//{
+//	int a, b = 0;
+//	scanf("%d %d", &a, &b);
+//	if ((a < 60 && b >= 60) || (a >= 60 && b < 60))
+//	{
+//		printf("1");
+//	}
+//	else
+//	{
+//		printf("0");
+//	}
+//	return 0;
+//}
+
+//1.4.11
+//int main()
+//{
+//	int date = 0;
+//	scanf("%d", &date);
+//	if (date == 1 || date == 3 || date == 5)
+//	{
+//		printf("NO");
+//	}
+//	else
+//	{
+//		printf("YES");
+//	}
+//	return 0;
+//}
+
+//1.4.12
+//double time(double distance, double speed)
+//{
+//	double ti = distance / speed;
+//	return ti;
+//}
+//int main()
+//{
+//	double dis;
+//	scanf("%lf", &dis);
+//	double timewalk = time(dis, 1.2);
+//	double timebike = time(dis, 3.0) + 50.0;
+//	if (timewalk > timebike)
+//	{
+//		printf("Bike");
+//	}
+//	if (timewalk < timebike)
+//	{
+//		printf("Walk"); 
+//	}
+//	if (timewalk == timebike)
+//	{
+//		printf("All");
+//	}
+//	return 0;
+//}
+
+//1.4.13
+//double y;
+//double def1(double x)
+//{
+//	y = -x + 2.5;
+//	return y;
+//}
+//double def2(double x)
+//{
+//	y = 2.0 -1.5*(x-3.0)*(x-3.0);
+//	return y;
+//}
+//double def3(double x)
+//{
+//	y = x / 2.0 - 1.5;
+//	return y;
+//}
+//int main()
+//{
+//	double N = 0.0;
+//	double result = 0.0;
+//	scanf("%lf", &N);
+//	if (N >=0.0 && N < 5.0)
+//	{
+//		result = def1(N);
+//	}
+//	if (N >=5.0 && N < 10.0)
+//	{
+//		result = def2(N);
+//	}
+//	if (N >= 10.0 && N < 20.0)
+//	{
+//		result = def3(N);
+//	}
+//	printf("%.3lf", result);
+//	return 0;
+//}
+
+//1.4.14
+//int main()
+//{
+//	int gram = 0;
+//	char speed = '0';
+//	int money = 0;
+//	scanf("%d %c", &gram, &speed);
+//	if (gram - 1000 <= 0)
+//	{
+//		money = 8;
+//	}
+//	if (gram - 1000 > 0)
+//	{
+//		if ((gram - 1000) % 500 == 0)
+//		{
+//			money = ((gram - 1000) / 500) * 4 + 8;
+//		}
+//		else
+//		{
+//			money = ((gram - 1000) / 500 + 1) * 4 + 8;
+//		}
+//		
+//	}
+//	if (speed == 'y')
+//	{
+//		money += 5;
+//	}
+//	printf("%d", money);
+//	return 0;
+//}
+
+//1.4.15
+//int main()
+//{
+//	int x, y, z;
+//	scanf("%d %d %d", &x, &y, &z);
+//	if (x > y && x > z)
+//	{
+//		printf("%d", x);
+//	}
+//	if (y > x && y > z)
+//	{
+//		printf("%d", y);
+//	}
+//	if (z > x && z > y)
+//	{
+//		printf("%d", z);
 //	}
 //	return 0;
 //}
