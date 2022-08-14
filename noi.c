@@ -496,7 +496,7 @@
 //1.3.19.1
 //int main()
 //{
-//	unsigned int A, B;  //https://blog.csdn.net/weixin_43877387/article/details/118394375 https://baike.baidu.com/item/unsigned/8604216
+//	unsigned int A, B;  // https://blog.csdn.net/weixin_43877387/article/details/118394375 https://baike.baidu.com/item/unsigned/8604216
 //	scanf("%u %u", &A, &B);
 //	printf("%u", A * B);
 //	return 0;
@@ -590,7 +590,7 @@
 //}
 
 //1.4.05
-//int main()  //https://blog.csdn.net/weixin_43877387/article/details/118455974
+//int main()  // https://blog.csdn.net/weixin_43877387/article/details/118455974
 //{
 //	long long  x;
 //	long long  y;
@@ -842,3 +842,38 @@
 //	}
 //	return 0;
 //}
+
+//1.4.16
+//int main()
+//{
+//	int x, y, z;
+//	scanf("%d %d %d", &x, &y, &z);
+//	if (x + y > z && x + z > y && y + z > x)
+//	{
+//		printf("yes");
+//	}
+//	else
+//	{
+//		printf("no");
+//	}
+//	return 0;
+//}
+
+//1.4.17
+//int main()  // https://www.jianshu.com/p/6d772898a65d
+//{
+//	int year;
+//	scanf("%d", &year);
+//	if ((year % 100 != 0 && year % 4 == 0) || (year % 100 == 0 && year % 400 == 0))
+//	{
+//		printf("Y");
+//	}
+//	else
+//	{
+//		printf("N");
+//	}
+//	return 0;
+//}
+
+//1.4.18
+int main()
