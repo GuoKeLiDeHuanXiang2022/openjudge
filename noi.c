@@ -1114,3 +1114,21 @@
 //	printf("%d %d %d %d", jin_all, yin_all, ton_all, all);
 //	return 0;
 //}
+
+//1.5.08
+int main()
+{
+	int i;
+	int coner_num = 0;
+	int sum = 0;
+	int coner = 0;
+	scanf("%d", &coner_num);
+	sum = (coner_num - 2) * 180;
+	for (i = 1; i < coner_num; i++)
+	{
+		scanf("%d", &coner);
+		sum -= coner;
+	}
+	printf("%d", sum);
+	return 0;
+}
