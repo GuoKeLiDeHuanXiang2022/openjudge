@@ -1196,3 +1196,40 @@
 //	printf("%d\n%d\n%d", num_1, num_5, num_10);
 //	return 0;
 //}
+
+//1.5.12
+//int main()
+//{
+//	int N = 0;
+//	int m = 0;
+//	int i;
+//	int num = 0;
+//	int result = 0;
+//	scanf("%d %d", &N, &m);
+//	for (i = 0; i < N; i++)
+//	{
+//		scanf("%d", &num);
+//		if (num == m)
+//		{
+//			result += 1;
+//		}
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
+
+//1.5.13
+//int main()
+//{
+//	int num = 0;
+//	int b = 0;
+//	scanf("%d %d", &num, &b);
+//	int i;
+//	int result = 1;
+//	for (i = 0; i < b; i++)
+//	{
+//		result *= num;
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
