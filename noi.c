@@ -876,4 +876,195 @@
 //}
 
 //1.4.18
-int main()
+//int main()
+//{
+//	int x, y;
+//	scanf("%d %d", &x, &y);
+//	if (x >= -1 && x <= 1 && y >= -1 && y <= 1)
+//	{
+//		printf("yes");
+//	}
+//	else
+//	{
+//		printf("no");
+//	}
+//	return 0;
+//}
+
+//1.4.19
+//int main()
+//{
+//	int a, b, re, i = 0;
+//	char sign;
+//	scanf("%d %d %c", &a, &b, &sign);
+//	switch (sign)
+//	{
+//	case '+':
+//		re = a + b;
+//		break;
+//	case '-':
+//		re = a - b;
+//		break;
+//	case '*':
+//		re = a * b;
+//		break;
+//	case '/':
+//		re = a / b;
+//		if (b == 0)
+//		{
+//			printf("Divided by zero!");
+//			i++;
+//		}
+//		break;
+//	default:
+//		printf("Invalid operator!");
+//		i++;
+//		break;
+//	}
+//	if (i == 0)
+//	{
+//		printf("%d", re);
+//	}
+//	return 0;
+//}
+
+//1.4.20
+//int main()
+//{
+//	double a, b, c;
+//	scanf("%lf %lf %lf", &a, &b, &c);
+//	if (b * b == 4 * a * c)
+//	{
+//		double result1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+//		printf("x1=x2=%.5lf", result1);
+//	}
+//	if (b*b > 4 * a * c)
+//	{
+//		double result2 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+//		double result3 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+//		if (result2 > result3)
+//		{
+//			printf("x1=%.5lf;x2=%.5lf", result2, result3);
+//		}
+//		if (result2 < result3)
+//		{
+//			printf("x1=%.5lf;x2=%.5lf", result3, result2);
+//		}
+//	}
+//	if (b * b < 4 * a * c)
+//	{
+//		double xu = sqrt(4 * a * c - b * b) / (2 * a);
+//		double shi = -b / (2 * a);
+//		if (shi == -0.0)
+//		{
+//			shi = 0.0;
+//		}
+//		printf("x1=%.5lf+%.5lfi;x2=%.5lf-%.5lfi", shi, xu, shi, xu);
+//	}
+//	return 0;
+//}
+
+//1.4.21
+//int main()
+//{
+//	int n, x, y, num = 0;
+//	scanf("%d %d %d", &n, &x, &y);
+//	if (y >= n * x)
+//	{
+//		printf("0");
+//	}
+//	else if (y <= n * x)
+//	{
+//		num = n - (y / x);
+//		if (y % x != 0)
+//		{
+//			num -= 1;
+//		}
+//		printf("%d", num);
+//	}
+//}
+
+//1.5.01
+//int main()
+//{
+//	int i;
+//	int n = 0;
+//	int num = 0;
+//	int result = 0;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &num);
+//		result += num;
+//	}
+//	printf("%.2f", (float)result/(float)i);
+//	return 0;
+//}
+
+//1.5.02
+//int main()
+//{
+//	int i;
+//	float money;
+//	float sum;
+//	for (i = 0;i<12; i++)
+//	{
+//		scanf("%f", &money);
+//		sum += money;
+//	}
+//	printf("$%.2lf", sum / 12.0);
+//	return 0;
+//}
+
+//1.5.03
+//int main()
+//{
+//	int i;
+//	int max;
+//	float sum;
+//	float every;
+//	scanf("%d", &max);
+//	for (i=0;i<max;i++)
+//	{
+//		scanf("%f", &every);
+//		sum += every;
+//	}
+//	printf("%.4lf", sum / i);
+//	return 0;
+//}
+
+//1.5.04
+//int main()
+//{
+//	int n = 0;
+//	int i = 0;
+//	int every = 0;
+//	int sum = 0;
+//	scanf("%d", &n);
+//	for (i=0;i<n;i++)
+//	{
+//		scanf("%d", &every);
+//		sum += every;
+//	}
+//	printf("%d %.5lf", sum, (double)sum/(double)i);
+//}
+
+//1.5.05
+//int main()
+//{
+//	int i;
+//	int num = 0;
+//	scanf("%d", &num);
+//	int every = 0;
+//	int max = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		scanf("%d", &every);
+//		if (every > max)
+//		{
+//			max = every;
+//		}
+//	}
+//	printf("%d", max);
+//	return 0;
+//}
