@@ -1116,19 +1116,83 @@
 //}
 
 //1.5.08
-int main()
-{
-	int i;
-	int coner_num = 0;
-	int sum = 0;
-	int coner = 0;
-	scanf("%d", &coner_num);
-	sum = (coner_num - 2) * 180;
-	for (i = 1; i < coner_num; i++)
-	{
-		scanf("%d", &coner);
-		sum -= coner;
-	}
-	printf("%d", sum);
-	return 0;
-}
+//int main()
+//{
+//	int i;
+//	int coner_num = 0;
+//	int sum = 0;
+//	int coner = 0;
+//	scanf("%d", &coner_num);
+//	sum = (coner_num - 2) * 180;
+//	for (i = 1; i < coner_num; i++)
+//	{
+//		scanf("%d", &coner);
+//		sum -= coner;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.09
+//int main()
+//{
+//	int start = 0, end = 0;
+//	int sum = 0;
+//	scanf("%d %d", &start, &end);
+//	for (start; start <= end; start++)
+//	{
+//		if (start % 2 == 1)
+//		{
+//			sum += start;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.10
+//int main()
+//{
+//	int start = 0, end = 0;
+//	scanf("%d %d", &start, &end);
+//	int sum = 0;
+//	for (start; start <= end; start++)
+//	{
+//		if (start % 17 == 0)
+//		{
+//			sum += start;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.11
+//int main()
+//{
+//	int i;
+//	int k = 0;
+//	int num = 0;
+//	int num_1 = 0;
+//	int num_5 = 0;
+//	int num_10 = 0;
+//	scanf("%d", &k);
+//	for (i = 0; i < k; i++)
+//	{
+//		scanf("%d", &num);
+//		if (num == 1)
+//		{
+//			num_1 += 1;
+//		}
+//		if (num == 5)
+//		{
+//			num_5 += 1;
+//		}
+//		if (num == 10)
+//		{
+//			num_10 += 1;
+//		}
+//	}
+//	printf("%d\n%d\n%d", num_1, num_5, num_10);
+//	return 0;
+//}
