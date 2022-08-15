@@ -1068,3 +1068,49 @@
 //	printf("%d", max);
 //	return 0;
 //}
+
+//1.5.06
+//int main()
+//{
+//	int num = 0;
+//	int i;
+//	int max = -1;
+//	int min = 1001;
+//	int every = 0;
+//	scanf("%d", &num);
+//	for (i = 0;i<num;i++)
+//	{
+//		scanf("%d", &every);
+//		if (every < min)
+//		{
+//			min = every;
+//		}
+//		if (every > max)
+//		{
+//			max = every;
+//		}
+//	}
+//	printf("%d", max - min);
+//	return 0;
+//}
+
+//1.5.07
+//int main()
+//{
+//	int num = 0;
+//	int i;
+//	scanf("%d", &num);
+//	int jin = 0, yin = 0, ton = 0;
+//	int jin_all = 0, yin_all = 0, ton_all = 0;
+//	int all = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		scanf("%d %d %d", &jin, &yin, &ton);
+//		jin_all += jin;
+//		yin_all += yin;
+//		ton_all += ton;
+//	}
+//	all = jin_all + yin_all + ton_all;
+//	printf("%d %d %d %d", jin_all, yin_all, ton_all, all);
+//	return 0;
+//}
