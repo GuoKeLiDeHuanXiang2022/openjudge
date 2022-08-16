@@ -792,7 +792,7 @@
 //	return 0;
 //}
 
-//1.4.14
+//1.4.14.01
 //int main()
 //{
 //	int gram = 0;
@@ -820,6 +820,28 @@
 //		money += 5;
 //	}
 //	printf("%d", money);
+//	return 0;
+//}
+
+//1.4.14.02
+//int main()  // ¼Æ¿Æ2204ËÚÓî
+//{
+//	int a = 0, s = 0;
+//	char b;
+//	scanf("%d %c", &a, &b);
+//	if (a <= 1000)
+//	{
+//		s = 8;
+//	}
+//	else if (a > 1000)
+//	{
+//		s = 8 + ceil((double)(a - 1000) / 500) * 4;
+//	}if (b == 'y')
+//	{
+//		s = s + 5;
+//	}
+//	printf("%d", s);
+//
 //	return 0;
 //}
 
@@ -1233,3 +1255,89 @@
 //	printf("%d", result);
 //	return 0;
 //}
+
+//1.5.14
+//int main()
+//{
+//	double people = 0;
+//	int year = 0;
+//	int i;
+//	scanf("%lf %d", &people, &year);
+//	for (i = 0; i < year; i++)
+//	{
+//		people *= 1.001;
+//	}
+//	printf("%.4lf", people);
+//	return 0;
+//}
+
+//1.5.15
+//int main()
+//{
+//	double M;
+//	double R = 0;
+//	int Y = 0;
+//	int i;
+//	scanf("%lf %lf %d", &R, &M, &Y);
+//	R = 1.0 + R * 0.01;
+//	for (i = 0; i < Y; i++)
+//	{
+//		M *= R;
+//	}
+//	printf("%d", (int)M);
+//	return 0;
+//}
+
+//1.5.16
+//int main()
+//{
+//	double start_money = 200.0;
+//	double N = 0;
+//	double K = 0.0;
+//	int i = 1;
+//	scanf("%lf %lf", &N, &K);
+//	K = 1.0 + K * 0.01;
+//	while (1)
+//	{
+//		if (i > 20)
+//		{
+//			printf("Impossible");
+//			break;
+//		}
+//		if (i * N >= start_money)
+//		{
+//			printf("%d",i);
+//			break;
+//		}
+//		start_money *= K;
+//		i++;
+//	}
+//	return 0;
+//}
+
+//1.5.17
+//int main()
+//{
+//	int a1 = 1;
+//	int a2 = 1;
+//	int an_2 = 0;
+//	int an_1 = 0;
+//	int an = 1;
+//	int n = 3;
+//	int end = 0;
+//	scanf("%d", &end);
+//	an_2 = a1;
+//	an_1 = a2;
+//	while (n <= end)
+//	{
+//		an = an_1 + an_2;
+//		an_2 = an_1;
+//		an_1 = an;	
+//		n++;
+//	}
+//	printf("%d", an);
+//	return 0;
+//}
+
+
+
