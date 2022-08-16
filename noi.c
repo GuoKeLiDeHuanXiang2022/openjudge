@@ -1339,5 +1339,74 @@
 //	return 0;
 //}
 
+//1.5.18
+//int main()
+//{
+//	int i;
+//	int n = 0;
+//	scanf("%d", &n);
+//	n -= 1;
+//	double old_1 = 0;
+//	double old_2 = 0;
+//	double old_eff = 0;
+//	double new_1 = 0;
+//	double new_2 = 0;
+//	double new_eff = 0;
+//	scanf("%lf %lf", &old_1, &old_2);
+//	old_eff = old_2 / old_1;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%lf %lf", &new_1, &new_2);
+//		new_eff = new_2 / new_1;
+//		if (new_eff - old_eff > 0.05)
+//		{
+//			printf("better\n");
+//		}
+//		else if (old_eff - new_eff > 0.05)
+//		{
+//			printf("worse\n");
+//		}
+//		else
+//		{
+//			printf("same\n");
+//		}
+//	}
+//	return 0;
+//}
 
+//1.5.19
+//int main()
+//{
+//	int i;
+//	int n = 0;
+//	scanf("%d", &n);
+//	double time = 0;
+//	double x = 0, y = 0;
+//	double distance = 0;
+//	int peo_num = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%lf %lf %d", &x, &y, &peo_num);
+//		distance = sqrt(x * x + y * y);
+//		time += distance / 25 + peo_num * 1.5;
+//	}
+//	time = ceil(time);
+//	printf("%d", (int)time);
+//	return 0;
+//}
 
+//1.5.20
+//int main()
+//{
+//	double h = 0;
+//	double s = 0;
+//	int i;
+//	scanf("%lf", &h);
+//	for (i = 0; i < 10; i++)
+//	{
+//		s += h + h / 2;
+//		h = h / 2;
+//	}
+//	s -= h;
+//	printf("%g\n%g", s, h);
+//}
