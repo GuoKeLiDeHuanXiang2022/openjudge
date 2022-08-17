@@ -1410,3 +1410,60 @@
 //	s -= h;
 //	printf("%g\n%g", s, h);
 //}
+
+//1.5.21
+//int main()
+//{
+//	long long int num = 0;
+//	scanf("%lld", &num);
+//	do
+//	{
+//		if (num == 1) break;
+//		if (num % 2 != 0)
+//		{
+//			printf("%lld*3+1=", num);
+//			num = num * 3 + 1;
+//			printf("%lld\n", num);
+//		}
+//		else if (num % 2 == 0)
+//		{
+//			printf("%lld/2=", num);
+//			num /= 2;
+//			printf("%lld\n", num);
+//		}
+//	} while (num != 1);
+//	printf("End");
+//}
+
+//1.5.22
+//int main()
+//{
+//	int i = 1;
+//	const int wage = 300;
+//	int budget = 0;
+//	int sum_every = 0;
+//	int sum_mother = 0;
+//	int sum_year = 0;
+//	for (i; i < 13; i++)
+//	{
+//		sum_every += wage;
+//		scanf("%d", &budget);
+//		if (sum_every < budget)
+//		{
+//			printf("-%d", i);
+//			break;
+//		}
+//		sum_every -= budget;
+//		if (sum_every / 100 > 0)
+//		{
+//			sum_mother += (sum_every / 100) * 100;
+//			sum_every -= (sum_every / 100) * 100;
+//		}
+//	}
+//	if (i == 13)
+//	{
+//		sum_year = sum_mother * 1.2 + sum_every;
+//		printf("%d", (int)sum_year);
+//	}
+//	return 0;
+//}
