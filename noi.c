@@ -1467,3 +1467,172 @@
 //	}
 //	return 0;
 //}
+
+//1.5.23
+//int main()
+//{
+//	int i;
+//	int all_num = 0;
+//	scanf("%d", &all_num);
+//	int people_num = 0;
+//	int medcine_num = 0;
+//	int cant_get_num = 0;
+//	scanf("%d", &people_num);
+//	for (i=0;i<people_num;i++)
+//	{
+//		scanf("%d", &medcine_num);
+//		if (all_num >= medcine_num)
+//		{
+//			all_num -= medcine_num;
+//
+//		}
+//		else
+//		{
+//			cant_get_num += 1;
+//		}
+//	}
+//	printf("%d", cant_get_num);
+//	return 0; 
+//}
+
+//1.5.24
+//int main()
+//{
+//	int i;
+//	int num = 0;
+//	scanf("%d", &num); 
+//	int high = 0, low = 0;
+//	int time = 0;
+//	int time_max = 0;
+//	for (i;i<num;i++)
+//	{
+//		scanf("%d %d", &high, &low);
+//		if (high>=90&&high<=140&&low>=60&&low<=90)
+//		{
+//			time += 1;
+//			if (time>time_max)
+//			{
+//				time_max = time;
+//			}
+//		}
+//		else
+//		{
+//			time = 0;
+//		}
+//	}
+//	printf("%d", time_max);
+//	return 0;
+//}
+
+//1.5.25
+//int main()  // https://blog.csdn.net/xcdq_aaa/article/details/105894356
+//{
+//	int g, a, b, c, r,e, f;
+//	for (g = 1; g <= 999; g++)
+//	{
+//		a = g % 7; b = g / 7 % 7; c = g / 7 / 7;
+//		e = g % 9; f = g / 9 % 9; r = g / 9 / 9;
+//		if (a == r && b == f && e == c)
+//		{
+//			printf("%d\n", g);
+//			printf("%d%d%d\n", c, b, a);
+//			printf("%d%d%d\n", r, f, e);
+//			return 0;
+//		}
+//	}
+//}
+
+//1.5.26.01
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i;
+//	int num = 0;
+//	int num_1 = 0, num_10 = 0, num_100 = 0, num_1000 = 0;
+//	int result = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &num);
+//		num_1000 = num / 1000;
+//		num_100 = (num % 1000) / 100;
+//		num_10 = (num % 1000 % 100) / 10;
+//		num_1 = (num % 1000 % 100 % 10);
+//		if (num_1 > num_10 + num_100 + num_1000)
+//		{
+//			result += 1;
+//		}
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
+
+//1.5.26.02
+//int def(int char_num)
+//{
+//	switch (char_num)
+//	{
+//	case 48:
+//		return 0;
+//	case 49:
+//		return 1;
+//	case 50:
+//		return 2;
+//	case 51:
+//		return 3;
+//	case 52:
+//		return 4;
+//	case 53:
+//		return 5;
+//	case 54:
+//		return 6;
+//	case 55:
+//		return 7;
+//	case 56:
+//		return 8;
+//	case 57:
+//		return 9;
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i;
+//	char num[5] = "0";
+//	int num_1 = 0, num_10 = 0, num_100 = 0, num_1000 = 0;
+//	int result = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%s", &num);
+//		num_1000 = def((int)num[0]);
+//		num_100 = def((int)num[1]);
+//		num_10 = def((int)num[2]);
+//		num_1 = def((int)num[3]);
+//		if (num_1 > num_10 + num_100 + num_1000)
+//		{
+//			result += 1;
+//		}
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
+
+//1.5.27
+//int main()
+//{
+//	int i = 1;
+//	double Sn = 0;
+//	double k = 0;
+//	scanf("%lf", &k);
+//	do {
+//		Sn += 1.0 / i++;
+//	} while (Sn<=k);
+//	printf("%d", i-1);
+//}
+
+//1.5.28
+int main()
+{
+
+}
