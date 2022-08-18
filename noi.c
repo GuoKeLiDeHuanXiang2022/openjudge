@@ -1618,6 +1618,31 @@
 //	return 0;
 //}
 
+//1.5.26.03
+//int main()  //雷学长给的建议 https://blog.csdn.net/BBBling/article/details/115540073
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i;
+//	char num[5] = "0";
+//	int num_1 = 0, num_10 = 0, num_100 = 0, num_1000 = 0;
+//	int result = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%s", &num);
+//		num_1000 = (int)num[0]-'0';
+//		num_100 = (int)num[1]-'0';
+//		num_10 = (int)num[2]-'0';
+//		num_1 = (int)num[3]-'0';
+//		if (num_1 > num_10 + num_100 + num_1000)
+//		{
+//			result += 1;
+//		}
+//	}
+//	printf("%d", result);
+//	return 0;
+//}
+
 //1.5.27
 //int main()
 //{
@@ -1631,8 +1656,126 @@
 //	printf("%d", i-1);
 //}
 
-//1.5.28
-int main()
-{
+//1.5.28.01
+//int main()
+//{
+//	char arr[11] = "0";
+//	scanf("%s", &arr);
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (arr[i] == '\0')
+//		{
+//			i -= 1;
+//			break;
+//		}
+//	}
+//	for (i; i >= 0; i--)
+//	{
+//		if (i != 0)
+//			printf("%c ", arr[i]);
+//		else
+//			printf("%c", arr[i]);
+//	}
+//}
 
-}
+//1.5.28.02
+//int main()
+//{
+//	char arr[11] = "0";
+//	scanf("%s", &arr);
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (arr[i] == '\0')
+//		{
+//			i -= 1;
+//			break;
+//		}
+//	}
+//	for (i; i >= 0; i--)
+//	{
+//		if (i != 0)
+//			printf("%d ", arr[i]-'0');
+//		else
+//			printf("%d", arr[i]-'0');
+//	}
+//}
+
+//1.5.29
+//int def(char arr_[12],int i_)
+//{
+//	int i0_ = i_;
+//	int i__;
+//	if (arr_ == "0")
+//	{
+//		printf("0");
+//		return 0;
+//	}
+//	for (i_; i_ < 12; i_++)
+//	{
+//		if (arr_[i_] == '\0')
+//		{
+//			i_ -= 1;
+//			i__ = i_;
+//			for (i__; i__ > 0; i__--)
+//			{
+//				if (arr_[i__] == '0')
+//				{
+//					i_ -= 1;
+//				}
+//				else
+//				{
+//					break;
+//				}
+//			}
+//			break;
+//		}
+//	}
+//	for (i_; i_ >= i0_; i_--)
+//	{
+//		printf("%d", arr_[i_] - '0');
+//	}
+//}
+//int main()
+//{
+//	char arr[12] = "0";
+//	scanf("%s", &arr);
+//	int i = 0;
+//	if (arr[0] != '-')
+//	{
+//		def(arr, i);
+//	}
+//	else
+//	{
+//		i = 1;
+//		printf("-");
+//		def(arr, i);
+//	}
+//}
+
+//1.5.30
+//int main()
+//{
+//	int num = 0;
+//	int k = 0;
+//	scanf("%d %d", &num, &k);
+//	int k_num = 0;
+//	int i;
+//	int num_0 = num;
+//	for (i = 100000; i>0; i/=10)
+//	{
+//		if (num - i >= 0)
+//		{
+//			if (num / i == 3)
+//			{
+//				k_num += 1;
+//			}
+//			num -= (num / i) * i;
+//		}
+//	}
+//	if (num_0 % 19 == 0 && k_num == k)
+//		printf("YES");
+//	else
+//		printf("NO");
+//}
