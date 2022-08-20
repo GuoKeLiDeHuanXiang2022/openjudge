@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
+#include <string.h>
 
 
 //1.1.01
@@ -1778,4 +1779,79 @@
 //		printf("YES");
 //	else
 //		printf("NO");
+//}
+
+//1.5.31.01 改完了 不要用 \b tnnd
+//int main()
+//{
+//	int i;
+//	int start;  //for循环
+//	char oc[5001] = "tnnd";  //灯的模拟 1:开 0:关
+//	int N = 0;  //灯数
+//	int M = 0;  //人数
+//	scanf("%d %d", &N, &M);
+//	for (start = 0; start < N; start++)
+//	{
+//		if (M != 0)
+//		{
+//			oc[start] = '0';  //初始化 M1的职责
+//		}
+//		else
+//		{
+//			oc[start] = '1';  //初始化 M1的职责
+//		}
+//	}
+//	for (i = 2; i <= M; i++)  //M3+
+//	{
+//		for (start = 0; start < N; start++)
+//		{
+//			if ((start + 1) % i == 0)
+//			{
+//				if (oc[start] == '1')
+//				{
+//					oc[start] = '0';
+//				}
+//				else
+//				{
+//					oc[start] = '1';
+//				}
+//			}
+//		}
+//	}
+//	printf("1");
+//	for (start = 1; start < N; start++)  //确认开关的
+//	{
+//		if (oc[start] == '0')
+//		{
+//			printf(",%d", start + 1);
+//		}
+//	}
+//}
+
+//1.5.31.02
+//int main()
+//{
+//	bool oc[5005];  //灯的模拟 1:开 0:关
+//	int N = 0;  //灯数
+//	int M = 0;  //人数
+//	scanf("%d %d", &N, &M);
+//	memset(oc, false, sizeof oc);
+//	for (int i = 2; i <= M; i++)  //M3+
+//	{
+//		for (int start = 1; start <= N; start++)
+//		{
+//			if (start % i == 0)
+//			{
+//				oc[start] = !oc[start];
+//			}
+//		}
+//	}
+//	printf("1");
+//	for (int start = 2; start <= N; start++)  //确认开关的
+//	{
+//		if (oc[start] == false)
+//		{
+//			printf(",%d", start);
+//		}
+//	}
 //}
