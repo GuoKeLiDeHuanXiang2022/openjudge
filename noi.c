@@ -1781,7 +1781,10 @@
 //		printf("NO");
 //}
 
-//1.5.31.01 改完了 不要用 \b tnnd
+//1.5.31.01 改完了 不要用 \b 会变得不幸 tnnd
+// 不要用 \b 会变得不幸!!!
+// 不要用 \b 会变得不幸!!!
+// 不要用 \b 会变得不幸!!!
 //int main()
 //{
 //	int i;
@@ -1801,7 +1804,7 @@
 //			oc[start] = '1';  //初始化 M1的职责
 //		}
 //	}
-//	for (i = 2; i <= M; i++)  //M3+
+//	for (i = 2; i <= M; i++)  //M2+
 //	{
 //		for (start = 0; start < N; start++)
 //		{
@@ -1855,3 +1858,48 @@
 //		}
 //	}
 //}
+
+//1.5.31.03
+//int main() {
+//	int i;
+//	int start;  //for循环
+//	char oc[5001] = "tnnd";  //灯的模拟 1:开 0:关
+//	int N = 0;  //灯数
+//	int M = 0;  //人数
+//	scanf("%d %d", &N, &M);
+//	for (start = 0; start < N; start++) {
+//		if (M != 0) oc[start] = '0';  //初始化 M1的职责
+//		else oc[start] = '1';  //初始化 M1的职责
+//	}
+//	for (i = 2; i <= M; i++) {
+//		for (start = 0; start < N; start++) {
+//			if ((start + 1) % i == 0) {
+//				if (oc[start] == '1') oc[start] = '0';
+//				else oc[start] = '1';
+//			}
+//		}
+//	}
+//	printf("1");
+//	for (start = 1; start < N; start++) {
+//		if (oc[start] == '0') printf(",%d", start + 1);
+//	}
+//}
+
+//1.5.31.04
+//int main() {
+//	bool oc[5005];  //灯的模拟 1:开 0:关
+//	int N = 0, M = 0;  //灯数
+//	scanf("%d %d", &N, &M);
+//	memset(oc, false, sizeof oc);
+//	for (int i = 2; i <= M; i++) {
+//		for (int start = 1; start <= N; start++) {
+//			if (start % i == 0) oc[start] = !oc[start];
+//		}
+//	}
+//	printf("1");
+//	for (int start = 2; start <= N; start++) {
+//		if (oc[start] == false) printf(",%d", start);
+//	}
+//}
+
+//
