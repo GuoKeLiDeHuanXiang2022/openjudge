@@ -1902,4 +1902,79 @@
 //	}
 //}
 
-//
+//1.5.32
+//int main() {
+//	int i, n = 0, qi_ = 2, pi_ = 1, qi = 2, pi = 1;
+//	double sum = 2;
+//	scanf("%d", &n);
+//	for (i = 2; i <= n; i++) {
+//		qi = qi_ + pi_;
+//		pi = qi_;
+//		sum += (double)qi / pi;
+//		qi_ = qi;
+//		pi_ = pi;
+//	}
+//	printf("%.4lf", sum);
+//	return 0;
+//}
+
+//1.5.33
+//int main() {
+//	int i, n = 0;
+//	double sum = 0;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++) {
+//		if (i % 2 != 0) sum += (float)1 / i;
+//		else sum -= (float)1 / i;
+//	}
+//	printf("%.4lf", sum);
+//}
+
+//1.5.34
+//int main() {
+//	int i,max, ji, n = 0,sum = 0;
+//	scanf("%d", &n);
+//	for (max = 1; max <= n; max++) {
+//		ji = 1;
+//		for (i = 1; i <= max; i++) {
+//			ji *= i;
+//		}
+//		sum += ji;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.35
+//int main() {
+//	int max , i, n = 0;
+//	double ji, e = 1;
+//	scanf("%d", &n);
+//	for (max = 1; max <= n; max++) {
+//		ji = 1;
+//		for (i = 1; i <= max; i++) {
+//			ji *= i;
+//		}
+//		e += 1 / ji;
+//	}
+//	printf("%.10lf", e);
+//}
+
+//1.5.36  // ³¬Ê±
+//float def_ji(float num, int ci) {
+//	int i_;
+//	float ji_ = 1;
+//	for (i_ = 0; i_ < ci; i_++) {
+//		ji_ *= num;
+//	}
+//	return ji_;
+//}
+//int main() {
+//	float sum = 0, x = 0;
+//	int i, max, n = 0;
+//	scanf("%f %d", &x, &n);
+//	for (max = n; max > 0; max--) {		
+//		sum += def_ji(x,max);
+//	}
+//	printf("%.2f", sum+1);
+//}
