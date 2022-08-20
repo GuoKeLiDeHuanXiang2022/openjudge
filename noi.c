@@ -1958,6 +1958,7 @@
 //		e += 1 / ji;
 //	}
 //	printf("%.10lf", e);
+//	return 0;
 //}
 
 //1.5.36  // ³¬Ê±
@@ -1978,3 +1979,38 @@
 //	}
 //	printf("%.2f", sum+1);
 //}
+
+//1.5.36.01
+//int main() {
+//	float sum = 1, x = 0;
+//	int i,  n = 0;
+//	scanf("%f %d", &x, &n);
+//	for (i = 0; i <= n; i++)
+//		sum *= x;
+//	if (x==1) printf("%.2f", (float)n*1 + 1);
+//	else 
+//		if ((sum - 1) / (x - 1)!=-0.00) printf("%.2f", (sum-1)/(x-1));
+//		else printf("%.2f", -(sum - 1) / (x - 1));
+//	return 0;
+
+//1.5.36.02  // 0^n=0 :(
+//int main() {
+//	float sum = 1, x = 0;
+//	int i, n = 0;
+//	scanf("%f %d", &x, &n);
+//	for (i = 0; i <= n; i++)
+//		sum *= x;
+//	if (x == 1) printf("%.2f", (float)n * 1 + 1);
+//	else if (x == -1)
+//		if (n % 2 == 0) printf("1.00");
+//		else printf("0.00");
+//	else if (x == 0) printf("1.00");
+//	else printf("%.2f", (sum - 1) / (x - 1));
+//	return 0;
+//}
+
+//1.5.37
+int main()
+{
+
+}
