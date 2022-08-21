@@ -2010,7 +2010,33 @@
 //}
 
 //1.5.37
-int main()
-{
+//int main()
+//{
+//	int M = 0, N = 0, X = 0;
+//	scanf("%d %d %d", &M, &N, &X);
+//	X -= M / N;
+//	while (M >= N && X >= M / N) {
+//		X -= M / N;
+//		N += M / N;
+//	}
+//	printf("%d", N);
+//	return 0;
+//}
 
-}
+//1.5.42
+//int main() {
+//	int s = 0, h_max = 0, w_max = 0;
+//	char ch = '0';
+//	scanf("%d %d %c %d", &h_max, &w_max, &ch, &s);
+//	for (int h = 1; h <= h_max; h++) {
+//		for (int w = 1; w <= w_max; w++) {
+//			if (h == 1 || h == h_max) printf("%c", ch);
+//			else
+//				if (w == 1 || w == w_max) printf("%c", ch);
+//				else
+//					if (s==1) printf("%c", ch);
+//					else printf(" ");
+//		}
+//		printf("\n");
+//	}
+//}
