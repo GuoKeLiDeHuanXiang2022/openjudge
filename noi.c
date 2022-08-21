@@ -2009,7 +2009,7 @@
 //	return 0;
 //}
 
-//1.5.37
+//1.5.37 没过 待修改
 //int main()
 //{
 //	int M = 0, N = 0, X = 0;
@@ -2020,6 +2020,78 @@
 //		N += M / N;
 //	}
 //	printf("%d", N);
+//	return 0;
+//}
+
+//1.5.39
+//bool def_7(int num) {
+//	int num_10 = num / 10;
+//	int num_1 = num % 10;
+//	if (num_10 == 7 || num_1 == 7) {
+//		return true;
+//	}else{
+//		return false;
+//	}
+//}
+//int main() {
+//	int i, n = 0, ji = 0, sum = 0;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++) {
+//		if (i % 7 == 0 || def_7(i)) {
+//			continue;
+//		}else {
+//			ji = i*i;
+//		}
+//		sum += ji;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.40
+//int def_1(int num) {
+//	int i, num_1 = 0;
+//	for (i = 10000; i > 0; i /= 10) {
+//		if (num >= i) {
+//			if (num / i == 1) {
+//				num_1++;
+//			}
+//			num %= i;  //无论有没有 都要把之前的数字消掉
+//		}
+//	}
+//	return num_1;
+//}
+//int main() {
+//	int i, n = 0,sum=0;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++) {
+//		sum += def_1(i);
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.5.41
+//int def_2(int num) {
+//	int i,num_2=0;
+//	for (i = 1000000000; i > 0; i /= 10) {
+//		//printf("%d\n", i);
+//		if (num >= i) {
+//			if (num / i == 2) {
+//				num_2++;
+//			}
+//			num %= i;
+//		}
+//	}
+//	return num_2;
+//}
+//int main() {
+//	int i, min = 0, max = 0,sum= 0;
+//	scanf("%d %d", &min, &max);
+//	for (i = min; i <= max; i++) {
+//		sum += def_2(i);
+//	}
+//	printf("%d", sum);
 //	return 0;
 //}
 
@@ -2040,3 +2112,78 @@
 //		printf("\n");
 //	}
 //}
+
+//1.5.43.01  //超时 因为倒着走 会有很多数浪费 正着走遇见2、3 就break了
+//int main() {
+//	int i, num = 0;
+//	scanf("%d", &num);
+//	for (i = num - 1; i > 1; i--) {
+//		if (num % i == 0) {
+//			printf("%d", i);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+//1.5.43.02  // https://blog.csdn.net/qq_41264055/article/details/108524649
+//int main() {
+//	int i, num = 0;
+//	scanf("%d", &num);
+//	for (i = 2; i < num; i++) {
+//		if (num % i == 0) {
+//			printf("%d", num / i);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+//1.5.44.01  // 超时
+//int main() {
+//	int n = 0, num, num_=0, y, n_=0;
+//	scanf("%d", &n);
+//	for (num = 2;; num++) {
+//		for (y = 2; y <= num; y++) {  // 不用一直跑到num
+//			if (num % y != 0) {
+//				continue;
+//			}
+//			else {
+//				if (y == num) {
+//					num_ = num;
+//					n_++;
+//				}
+//				break;
+//			}
+//		}
+//		if (n_ == n) {
+//			break;
+//		}
+//	}
+//	printf("%d", num);
+//}
+
+//1.5.44.02
+int main()
+{
+	int n, i;//i需要定义在外面输出用 
+	scanf("%d", &n);
+	for (i = 2;; i++)	//死循环从2开始试数 
+	{
+		int a = 1;	//判断是否为素数  1是 0不是 
+		for (int j = 2; j * j <= i; j++)//从2开始因子j的平方一直小于数i且i不能被j整除则说明 i是素数 
+		{
+			if (i % j == 0) //当前i能被j整除时 便不是素数 修改判断值a=0 提前结束内层循环 
+			{
+				a = 0;
+				break;
+			}
+		}
+		if (a == 1)	//a=1则是素数 
+		{
+			n--;	//n--  
+			if (n == 0) break;//当n等于0时 当前i便是第n个素数 结束死循环 
+		}
+	}
+	printf("%d", i);
+}
