@@ -2411,5 +2411,30 @@
 //	}
 //}
 
-
+//1.6.06
+//int arr[10001]={ 0 };
+//int main()
+//{
+//	int L = 0, M = 0, sum = 0;
+//	scanf("%d %d", &L, &M);
+//	for (int i = 0; i <= L; i++)
+//	{
+//		arr[i] = 1;
+//	}
+//	for (int i = 0; i < M; i++)
+//	{
+//		int start = 0, end = 0;
+//		scanf("%d %d", &start, &end);
+//		for (int ii = start; ii <= end; ii++)
+//		{
+//			arr[ii] = 0;
+//		}
+//	}
+//	for (int i = 0; i <= L; i++)
+//	{
+//		if (arr[i] == 1) sum++;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
 
