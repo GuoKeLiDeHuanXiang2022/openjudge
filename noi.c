@@ -2023,6 +2023,32 @@
 //	return 0;
 //}
 
+//1.5.38  //MD 样例有问题!!! tnnd
+//int main()
+//{
+//	int Cm=0, m=0, c = 0;
+//	scanf("%d", &m);
+//	if (m == 0)
+//	{
+//		scanf("%d", &Cm);
+//		printf("0\n");
+//	}
+//	for (int w = m; w > 0; w--)
+//	{
+//		scanf("%d", &Cm);
+//		if (w == 1)
+//		{
+//			printf("%d\n", w * Cm);
+//		}
+//		else
+//		{
+//			printf("%d ", w * Cm);
+//		}
+//	}
+//	scanf("%d", &Cm);
+//	return 0;
+//}
+
 //1.5.39
 //bool def_7(int num) {
 //	int num_10 = num / 10;
@@ -2139,51 +2165,197 @@
 //	return 0;
 //}
 
-//1.5.44.01  // 超时
-//int main() {
-//	int n = 0, num, num_=0, y, n_=0;
+//1.5.44.01  //没事品一品
+//int main()
+//{
+//	int n = 0, num, y, n_ = 0;
 //	scanf("%d", &n);
-//	for (num = 2;; num++) {
-//		for (y = 2; y <= num; y++) {  // 不用一直跑到num
-//			if (num % y != 0) {
-//				continue;
-//			}
-//			else {
-//				if (y == num) {
-//					num_ = num;
-//					n_++;
-//				}
+//	for (num = 2;; num++)
+//	{
+//		bool num_su = true;  //1
+//		for (y = 2; y * y <= num; y++)  //2
+//		{
+//			if (num % y == 0)  //不是素数
+//			{
+//				num_su = !num_su;  //3
 //				break;
 //			}
 //		}
-//		if (n_ == n) {
-//			break;
+//		if (num_su) {
+//			n--;  //4
+//			if (n == 0) break;
 //		}
 //	}
 //	printf("%d", num);
 //}
 
-//1.5.44.02
-int main()
-{
-	int n, i;//i需要定义在外面输出用 
-	scanf("%d", &n);
-	for (i = 2;; i++)	//死循环从2开始试数 
-	{
-		int a = 1;	//判断是否为素数  1是 0不是 
-		for (int j = 2; j * j <= i; j++)//从2开始因子j的平方一直小于数i且i不能被j整除则说明 i是素数 
-		{
-			if (i % j == 0) //当前i能被j整除时 便不是素数 修改判断值a=0 提前结束内层循环 
-			{
-				a = 0;
-				break;
-			}
-		}
-		if (a == 1)	//a=1则是素数 
-		{
-			n--;	//n--  
-			if (n == 0) break;//当n等于0时 当前i便是第n个素数 结束死循环 
-		}
-	}
-	printf("%d", i);
-}
+//1.5.44.02  // https://blog.csdn.net/weixin_50901683/article/details/108911600
+//int main()
+//{
+//	int n, i;//i需要定义在外面输出用 
+//	scanf("%d", &n);
+//	for (i = 2;; i++)	//死循环从2开始试数 
+//	{
+//		int a = 1;	//判断是否为素数  1是 0不是 
+//		for (int j = 2; j * j <= i; j++)//从2开始因子j的平方一直小于数i且i不能被j整除则说明 i是素数 
+//		{
+//			if (i % j == 0) //当前i能被j整除时 便不是素数 修改判断值a=0 提前结束内层循环 
+//			{
+//				a = 0;
+//				break;
+//			}
+//		}
+//		if (a == 1)	//a=1则是素数 
+//		{
+//			n--;	//n--  
+//			if (n == 0) break;//当n等于0时 当前i便是第n个素数 结束死循环 
+//		}
+//	}
+//	printf("%d", i);
+//}
+
+//1.5.45
+//int main()
+//{
+//	int sum = 0,n = 0;
+//	scanf("%d", &n);
+//	for (int i = 0;; i++)
+//	{
+//		if (n >= i)
+//		{
+//			sum += i * i;
+//			n -= i;
+//		}
+//		else
+//		{
+//			sum += n * i;
+//			break;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.6.01
+//int main()
+//{
+//	int N = 0, m = 0, result=0;
+//	scanf("%d", &N);
+//	int num[100]={0};
+//	for (int i = 0; i < N; i++)
+//	{
+//		scanf("%d", &num[i]);
+//	}
+//	scanf("%d", &m);
+//	for (int i = 0; i < N; i++)
+//	{
+//		if (num[i] == m)
+//		{
+//			result++;
+//		}
+//	}
+//	printf("%d", result);
+//}
+
+//1.6.02
+//int main()
+//{
+//	int num[10]={0};
+//	int result = 0, h = 0;
+//	for (int i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &num[i]);
+//	}
+//	scanf("%d", &h);
+//	h += 30;
+//	for (int i = 0; i < 10; i++)
+//	{
+//		if (num[i] <= h)
+//		{
+//			result += 1;
+//		}
+//	}
+//	printf("%d", result);
+//}
+
+//1.6.03
+//float price(int num_, int i_)
+//{
+//	float pri_ = 0;
+//	switch (i_)
+//	{
+//	case 0:
+//		pri_ = 28.9;
+//		break;
+//	case 1:
+//		pri_ = 32.7;
+//		break;
+//	case 2:
+//		pri_ = 45.6;
+//		break;
+//	case 3:
+//		pri_ = 78;
+//		break;
+//	case 4:
+//		pri_ = 35;
+//		break;
+//	case 5:
+//		pri_ = 86.2;
+//		break;
+//	case 6:
+//		pri_ = 27.8;
+//		break;
+//	case 7:
+//		pri_ = 43;
+//		break;
+//	case 8:
+//		pri_ = 56;
+//		break;
+//	case 9:
+//		pri_ = 65;
+//		break;
+//	default:
+//		break;
+//	}
+//	return num_ * pri_;
+//}
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	float sum = 0;
+//	for (int i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	for (int i = 0; i < 10; i++)
+//	{
+//		sum += price(arr[i], i);
+//	}
+//	printf("%.1f", sum);
+//	return 0;
+//}
+
+//1.6.04
+//int main()
+//{
+//	int arr[99] = { 0 };
+//	int i, n = 0;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	for (i--; i >= 0; i--)
+//	{
+//		if (i != 0)
+//		{
+//			printf("%d ", arr[i]);
+//		}
+//		else
+//		{
+//			printf("%d", arr[i]);
+//		}
+//	}
+//}
+
+//
