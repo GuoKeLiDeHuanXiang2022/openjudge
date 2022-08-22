@@ -1902,6 +1902,30 @@
 //	}
 //}
 
+//1.5.31.05  //22数据科学lg的思路 考虑每盏灯的开关次数
+//int main()
+//{
+//	int m = 0;
+//	int n = 0;
+//	int i = 1;
+//	int j = 1;
+//	scanf("%d %d", &n, &m);
+//	for (i = 1; i <= n; i++)
+//	{
+//		int a = -1;
+//		for (j = 2; j <= m; j++)
+//		{
+//			if (i % j == 0)
+//				a = -a;
+//			else
+//				a = a;
+//		}
+//		if (i == 1) printf("1");
+//		if (a == -1 && i != 1) printf(",%d", i);
+//	}
+//	return 0;
+//}
+
 //1.5.32
 //int main() {
 //	int i, n = 0, qi_ = 2, pi_ = 1, qi = 2, pi = 1;
@@ -2009,14 +2033,14 @@
 //	return 0;
 //}
 
-//1.5.37 没过 待修改
+//1.5.37  //ceil() 的向上取整需要传参(float)
 //int main()
 //{
 //	int M = 0, N = 0, X = 0;
 //	scanf("%d %d %d", &M, &N, &X);
-//	X -= M / N;
-//	while (M >= N && X >= M / N) {
-//		X -= M / N;
+//	while (ceil((float)M / N) <= X&&M>=N)
+//	{
+//		X -= ceil((float)M / N);
 //		N += M / N;
 //	}
 //	printf("%d", N);
@@ -2358,4 +2382,34 @@
 //	}
 //}
 
-//
+//1.6.05  // 我不明白 为什么一定要用数组
+//int main()
+//{
+//	int arr[4] = { 0,0,0,0 };
+//	int max = 0;
+//	int year = 0;
+//	scanf("%d", &max);
+//	for (int i = 0; i < max; i++)
+//	{
+//		scanf("%d", &year);
+//		if (year >= 61) {
+//			arr[3]++;
+//		}
+//		else if (year >= 36 && year <= 60) {
+//			arr[2]++;
+//		}
+//		else if (year >= 19 && year <= 35) {
+//			arr[1]++;
+//		}
+//		else {
+//			arr[0]++;
+//		}
+//	}
+//	for (int i = 0; i < 4; i++)
+//	{
+//		printf("%.2lf%%\n", (float)arr[i]/max*100);
+//	}
+//}
+
+
+
