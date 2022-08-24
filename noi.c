@@ -2438,3 +2438,187 @@
 //	return 0;
 //}
 
+//1.6.07
+//int arr[3000] = { 0 };
+//int main()
+//{
+//	int num_1 = 0,  num= 0, len = 0;
+//	scanf("%d %d", &len, &num);
+//	for (int i = 0; i <= len-2; i++)
+//	{
+//		num_1 = num;
+//		scanf("%d", &num);
+//		arr[i] = fabs(num - num_1);
+//	}
+//	bool jo = true;
+//	for (int ii = 1; ii < len; ii++)
+//	{
+//		for (int i = 0; i <= len-2; i++)
+//		{
+//			if (arr[i] == ii)
+//			{
+//				break; 
+//			}
+//			else if (arr[i] != ii && i == len - 2)
+//			{
+//				jo = false;
+//			}
+//		}
+//		if (!jo) break;
+//	}
+//	if (jo) printf("Jolly");
+//	else printf("Not jolly");
+//}
+
+//1.6.08
+//int main()
+//{
+//	int a_g[100] = { 0 }, b_g[100] = { 0 };
+//	int num = 0, a_num = 0, b_num = 0;
+//	int a = 0, b = 0;
+//	int a_win = 0, b_win = 0;
+//	scanf("%d %d %d", &num, &a_num, &b_num);
+//	for (int i = 1; i <= a_num; i++)
+//	{
+//		scanf("%d", &a_g[i]);
+//	}
+//	a_g[0] = a_g[a_num];
+//	for (int i = 1; i <= b_num; i++)
+//	{
+//		scanf("%d", &b_g[i]);
+//	}
+//	b_g[0] = b_g[b_num];
+//	for (int i = 1; i <= num; i++)
+//	{
+//		if (i <= a_num)
+//		{
+//			a = a_g[i];
+//		}
+//		else
+//		{
+//			a = a_g[i % a_num];
+//		}
+//		if (i <= b_num)
+//		{
+//			b = b_g[i];
+//		}
+//		else
+//		{
+//			b = b_g[i % b_num];
+//		}
+//		if (a==0)
+//		{
+//			if (b == 2)
+//			{
+//				a_win++;
+//			}
+//			else if (b == 5)
+//			{
+//				b_win++;
+//			}
+//		}
+//		else if (a == 2)
+//		{
+//			if (b == 5)
+//			{
+//				a_win++;
+//			}
+//			else if (b == 0)
+//			{
+//				b_win++;
+//			}
+//		}
+//		else if (a == 5)
+//		{
+//			if (b == 0)
+//			{
+//				a_win++;
+//			}
+//			else if (b == 2)
+//			{
+//				b_win++;
+//			}
+//		}
+//	}
+//	if (a_win > b_win)
+//	{
+//		printf("A");
+//	}
+//	else if (b_win > a_win)
+//	{
+//		printf("B");
+//	}
+//	else
+//	{
+//		printf("draw");
+//	}
+//	return 0;
+//}
+
+//1.6.09
+//int main()
+//{
+//	int arr_a[1000] = { 0 };
+//	int arr_b[1000] = { 0 };
+//	int n = 0, sum = 0;
+//	scanf("%d", &n);
+//	for (int i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr_a[i]);
+//	}
+//	for (int i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr_b[i]);
+//	}
+//	for (int i = 0; i < n; i++)
+//	{
+//		sum += arr_a[i] * arr_b[i];
+//	}
+//	printf("%d", sum);
+//}
+
+//1.6.10
+//int main()
+//{
+//	char arr_1[201] = { '0' };
+//	char arr_2[201] = { '0' };
+//	char arr[202] = "00";
+//
+//	scanf("%s", arr_1);
+//	scanf("%s", arr_2);
+//
+//	int len_1 = strlen(arr_1), len_2 = strlen(arr_2);
+//	int len_max = len_1 > len_2 ? len_1 : len_2;
+//	int jin = 0;
+//	for (int i = 1; i <= len_max + 1; i++)
+//	{
+//		int a = 0, b = 0;
+//
+//		if (len_1 - i >= 0) a = arr_1[len_1 - i] - '0';
+//		else a = 0;
+//
+//		if (len_2 - i >= 0) b = arr_2[len_2 - i] - '0';
+//		else b = 0;
+//
+//		if (a + b + jin >= 10)
+//		{
+//			arr[len_max - i + 1] = (a + b+ jin - 10) + '0';
+//			jin = 1;
+//		}
+//		else
+//		{
+//			arr[len_max - i + 1] = (a + b + jin) + '0';
+//			jin = 0;
+//		}
+//	}
+//	// 按要求打印
+//	bool print = false;
+//	for (int i = 0; i < len_max + 1; i++)
+//	{
+//		if (arr[i] != '0'&&print==false) print = !print;  //满足第一个不是0时开始打印
+//		
+//		if (print) printf("%c", arr[i]);
+//	}
+//	if (!print) printf("0");  //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
+//	return 0;
+//}
