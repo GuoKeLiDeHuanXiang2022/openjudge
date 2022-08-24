@@ -2619,6 +2619,46 @@
 //		
 //		if (print) printf("%c", arr[i]);
 //	}
-//	if (!print) printf("0");  //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
+//	if (!print) printf("0");  //莫佬的提示 //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
 //	return 0;
 //}
+
+//1.6.11
+int main()
+{
+	char a[201] = { '0' };  // 被减数
+	char b[201] = { '0' };  // 减数
+	char c[201] = { '0' };  // 减数
+	scanf("%s", a);  // 写入a
+	scanf("%s", b);  // 写入b
+	int a_len = strlen(a);  // a的长度
+	int b_len = strlen(b);  // b的长度
+	int tui = 0;  // 退位
+	for (int i = 1;i<=a_len;i++)
+	{
+		int a_ = a[a_len-i] - '0';
+		int b_ = 0;
+
+		if (b_len-i>=0) b_ = b[b_len-i] - '0';
+		
+		if (a_>=b_+tui)
+		{
+			c[a_len-i] = a_ - b_ - tui + '0';
+			tui = 0; 
+		}
+		else
+		{
+			c[a_len-i] = 10 + a_ - b_ - tui + '0';
+			tui = 1;
+		}
+	}
+	bool print = false;
+	for (int i = 0; i < a_len; i++)
+	{
+		if (c[i] != '0'&&print==false) print = !print;  //满足第一个不是0时开始打印
+
+		if (print) printf("%c", c[i]);
+	}
+	if (!print) printf("0");  //莫佬的提示 //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
+	return 0;
+}
