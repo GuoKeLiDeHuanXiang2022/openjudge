@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 //1.1.01
@@ -2624,41 +2625,208 @@
 //}
 
 //1.6.11
-int main()
-{
-	char a[201] = { '0' };  // 被减数
-	char b[201] = { '0' };  // 减数
-	char c[201] = { '0' };  // 减数
-	scanf("%s", a);  // 写入a
-	scanf("%s", b);  // 写入b
-	int a_len = strlen(a);  // a的长度
-	int b_len = strlen(b);  // b的长度
-	int tui = 0;  // 退位
-	for (int i = 1;i<=a_len;i++)
-	{
-		int a_ = a[a_len-i] - '0';
-		int b_ = 0;
+//int main()
+//{
+//	char a[201] = { '0' };  // 被减数
+//	char b[201] = { '0' };  // 减数
+//	char c[201] = { '0' };  // 减数
+//	scanf("%s", a);  // 写入a
+//	scanf("%s", b);  // 写入b
+//	int a_len = strlen(a);  // a的长度
+//	int b_len = strlen(b);  // b的长度
+//	int tui = 0;  // 退位
+//	for (int i = 1;i<=a_len;i++)
+//	{
+//		int a_ = a[a_len-i] - '0';
+//		int b_ = 0;
+//
+//		if (b_len-i>=0) b_ = b[b_len-i] - '0';
+//		
+//		if (a_>=b_+tui)
+//		{
+//			c[a_len-i] = a_ - b_ - tui + '0';
+//			tui = 0; 
+//		}
+//		else
+//		{
+//			c[a_len-i] = 10 + a_ - b_ - tui + '0';
+//			tui = 1;
+//		}
+//	}
+//	bool print = false;
+//	for (int i = 0; i < a_len; i++)
+//	{
+//		if (c[i] != '0'&&print==false) print = !print;  //满足第一个不是0时开始打印
+//
+//		if (print) printf("%c", c[i]);
+//	}
+//	if (!print) printf("0");  //莫佬的提示 //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
+//	return 0;
+//}
 
-		if (b_len-i>=0) b_ = b[b_len-i] - '0';
-		
-		if (a_>=b_+tui)
-		{
-			c[a_len-i] = a_ - b_ - tui + '0';
-			tui = 0; 
-		}
-		else
-		{
-			c[a_len-i] = 10 + a_ - b_ - tui + '0';
-			tui = 1;
-		}
-	}
-	bool print = false;
-	for (int i = 0; i < a_len; i++)
-	{
-		if (c[i] != '0'&&print==false) print = !print;  //满足第一个不是0时开始打印
+//1.6.12
+//int main()
+//{
+//	char arr[32] = "0000000000000000000000000000002";
+//	int n = 0;
+//	scanf("%d", &n);
+//	int jin = 0;
+//	for (int ii = 1;ii<n;ii++)
+//	{
+//		for (int i = 30;i>=0;i--)
+//		{
+//			int num = arr[i]- '0';
+//			if (num*2<10)
+//			{
+//				arr[i] = num*2 + jin + '0';
+//				jin = 0;
+//			}
+//			else
+//			{
+//				arr[i] = num * 2 + jin - 10+'0';
+//				jin = 1;
+//			}
+//		} 
+//	}
+//	bool print = false;
+//	for (int i = 0; i <= 30; i++)
+//	{
+//		if (arr[i] != '0' && !print) print = !print;
+//		if (print) printf("%c", arr[i]);
+//	}
+//}
 
-		if (print) printf("%c", c[i]);
-	}
-	if (!print) printf("0");  //莫佬的提示 //if (i==len_max + 1 && arr[len_max + 1] == '0' && print == false)
-	return 0;
-}
+//1.6.13  // 大数取余 https://blog.csdn.net/qq_46527915/article/details/115325491
+//#define N 31
+//int main()
+//{
+//	char arr[N] = "0";  // 字符串
+//	int num[N] = { 0 };  // 数组
+//	scanf("%s", arr);
+//	for (int i = 0; i < strlen(arr); i++)  // 把字符串转换成数组
+//	{
+//		num[i] = arr[i] - '0';
+//	}
+//	bool key = false;
+//	bool first = true;
+//	for (int chu = 2; chu <= 9; chu++)
+//	{
+//		int j = 0;
+//		for (int i = 0; i < strlen(arr); i++)
+//		{
+//			j = (j * 10 + num[i]) % chu;
+//		}
+//		if (j == 0)
+//		{
+//			if (first)
+//			{
+//				printf("%d", chu);
+//				first = !first;
+//			}
+//			else printf(" %d", chu);
+//			key = true;
+//		}
+//	}
+//	if (!key) printf("none");
+//	return 0;
+//}
+
+//1.6.14  //错误的 待修改
+//#define MAX 400001
+//char arr[MAX];
+//int main()
+//{
+//	arr[MAX-1] = "1";
+//	int max = 0;
+//	scanf("%d", &max);
+//	int jin = 0;
+//	for (int i = 1; i <= max; i++)
+//	{
+//		int num = arr[MAX - i] - '0';
+//		arr[MAX - i] = num * i % 10 + jin;
+//		jin = (num * i) / 10;
+//	}
+//	bool print = false;
+//	for (int i = 0; i <= max-1; i++)
+//	{
+//		if (arr[i] != 0) print = !print;
+//		if (print) printf("%c",)
+//	}
+//}
+
+//1.7.01
+//int main()
+//{
+//	char arr[255] = "0";
+//	gets(arr);
+//	int sum = 0;
+//	for (int i = 0; i < strlen(arr); i++)
+//	{
+//		int c = arr[i];
+//		if (c >= 48 && c <= 57) sum++;
+//	}
+//	printf("%d", sum);
+//}
+
+//1.7.02
+//#define N 100000
+//#define LN 26
+//int main()
+//{
+//	bool letter_bool_list[LN];  // 判断该字母是不是第一次出现
+//	memset(letter_bool_list, false, sizeof letter_bool_list);  // 
+//
+//	char arr[N] = "0";
+//	scanf("%s", arr);
+//
+//	int arr_len = strlen(arr);
+//
+//	char letter_char_list[LN] = "";
+//
+//	for (int i = 0; i < arr_len; i++)
+//	{
+//		char ch = arr[i];
+//		bool init = false;
+//
+//		for (int ii = 0; ii < strlen(letter_char_list); ii++)
+//		{
+//			if (ch == letter_char_list[ii]) init = !init;
+//			if (init)
+//			{
+//				letter_bool_list[ii] = true;
+//				break;
+//			}
+//		}
+//		if (!init) letter_char_list[strlen(letter_char_list)] = ch;
+//	}
+//	bool have = false;
+//	for (int i = 0; i < strlen(letter_char_list); i++)
+//	{
+//		if (letter_bool_list[i] == false)
+//		{
+//			have = !have;
+//			printf("%c", letter_char_list[i]);
+//			break;
+//		}
+//	}
+//	if (!have) printf("no");
+//}
+
+//1.7.03
+//int main()
+//{
+//	double present;
+//	char DNA1[501] = "0", DNA2[501] = "0";
+//	scanf("%lf", &present);
+//	scanf("%s", DNA1);
+//	scanf("%s", DNA2);
+//	int all = strlen(DNA1);
+//	int sum = 0;
+//	for (int i = 0; i < all; i++)
+//	{
+//		if (DNA1[i] == DNA2[i]) sum++;
+//	}
+//	if ((double)sum / all >= present) printf("yes");
+//	else printf("no");
+//}
+
