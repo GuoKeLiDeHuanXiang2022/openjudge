@@ -2855,6 +2855,62 @@
 //}
 
 //1.7.05
+//int main()
+//{
+//	char input[101] = "0";
+//	gets(input);
+//	int ascll_num_1, ascll_num_2, ascll_num_all;
+//	for (int i = 0; i < strlen(input) - 1; i++)
+//	{
+//		ascll_num_1 = (int)input[i];
+//		ascll_num_2 = (int)input[i + 1];
+//		ascll_num_all = ascll_num_1 + ascll_num_2;
+//		printf("%c", ascll_num_all);
+//	}
+//	ascll_num_1 = (int)input[0];
+//	ascll_num_2 = (int)input[strlen(input) - 1];
+//	ascll_num_all = ascll_num_1 + ascll_num_2;
+//	printf("%c", ascll_num_all);
+//}
+
+//1.7.06
+//int main()
+//{
+//	char key[1000];
+//	gets(key);
+//	int len = strlen(key);
+//	char num_char_list[] = "0123456789";
+//	char letter_char_list[] = "0123456789ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_";
+//	for (int i = 0; i < strlen(num_char_list); i++)
+//	{
+//		if (key[0] == num_char_list[i])
+//		{
+//			printf("no");
+//			return 0;
+//		}
+//	}
+//	for (int i = 0; i < len; i++)
+//	{
+//		bool bo_2 = false;
+//		for (int ii = 0; ii < strlen(letter_char_list); ii++)
+//		{
+//			if (key[i] == letter_char_list[ii])
+//			{
+//				bo_2 = !bo_2;
+//				break;
+//			}
+//		}
+//		if (!bo_2)
+//		{
+//			printf("no");
+//			return 0;
+//		}
+//	}
+//	printf("yes");
+//	return 0;
+//}
+
+//1.7.07
 int main()
 {
 
