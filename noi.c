@@ -2911,7 +2911,57 @@
 //}
 
 //1.7.07
+//int main()
+//{
+//	char ssDNA[256] = "0";
+//	char ssDNA_2[256] = "0";
+//	gets(ssDNA);
+//	int ssDNA_len = strlen(ssDNA);
+//	for (int i = 0; i < ssDNA_len; i++)
+//	{
+//		if (ssDNA[i] == 'A')
+//		{
+//			ssDNA_2[i] = 'T';
+//		}	
+//		else if (ssDNA[i] == 'T')
+//		{
+//			ssDNA_2[i] = 'A';
+//		}	
+//		else if (ssDNA[i] == 'C')
+//		{
+//			ssDNA_2[i] = 'G';
+//		}
+//		else if (ssDNA[i] == 'G')
+//		{
+//			ssDNA_2[i] = 'C';
+//		}
+//	}
+//	printf("%s", ssDNA_2);
+//	return 0;
+//}
+
+//1.7.08
+//int main()
+//{
+//	char ch[31] = "0";
+//	char a, A;
+//	scanf("%s %c %c", ch, &a , &A);  //字符需要取地址
+//	for (int i = 0; i < strlen(ch); i++)
+//	{
+//		if (ch[i] == a)
+//		{
+//			ch[i] = A;
+//		}
+//	}
+//	printf("%s", ch);
+//	return 0;
+//}
+
+//1.7.09
 int main()
 {
+	char ch[80];
+	gets(ch);
 
 }
+
