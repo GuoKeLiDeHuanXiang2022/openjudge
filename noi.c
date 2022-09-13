@@ -131,7 +131,7 @@
 //int main()
 //{
 //	int a = 0;
-//	short b = '0';
+//	short b = 0;
 //	printf("%d %d", sizeof a, sizeof b);
 //	return 0;
 //}
@@ -2958,10 +2958,49 @@
 //}
 
 //1.7.09
+//int main()
+//{
+//	char ch[80];
+//	gets(ch);
+//	int len = strlen(ch);
+//	for (int i = 0; i < len; i++)
+//	{
+//		int num = ch[i];
+//		if ((num >= 65 && num < 90) || (num >= 97 && num < 122))
+//		{
+//			ch[i] += 1;
+//		}
+//		else if (num == 90)
+//			ch[i] = 'A';
+//		else if (num == 122)
+//			ch[i] = 'a';
+//	}
+//	printf("%s", ch);
+//}
+
+//1.7.10
+//int main()
+//{
+//	char ch[201];
+//	gets(ch);
+//	int ch_len = strlen(ch);
+//	for (int i = 0; i < ch_len; i++)
+//	{
+//		int ch_num = ch[i];
+//		if (ch_num >= 65 && ch_num < 70)
+//		{
+//			ch[i] += 21;
+//		}
+//		else if(ch_num >= 70 && ch_num < 91)
+//		{
+//			ch[i] -= 5;
+//		}
+//	}
+//	printf("%s", ch);
+//}
+
+//1.7.11
 int main()
 {
-	char ch[80];
-	gets(ch);
 
 }
-
