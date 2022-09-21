@@ -1,10 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
+/*
+* 作者: 果壳里的幻想
+*/
+
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
 
 
 //1.1.01
@@ -14,12 +18,23 @@
 //	return 0;
 //}
 
-//1.1.02
+//1.1.02.1
 //int main()
 //{
 //	int a, b, c = 0;
 //	scanf("%d %d %d", &a, &b, &c);
 //	printf("%d", b);
+//	return 0;
+//}
+
+//1.1.02.2
+//int main()
+//{
+//	int num1;  //第一个数
+//	int num2;  //第二个数
+//	int num3;  //第三个数
+//	scanf("%d %d %d", &num1, &num2, &num3);
+//	printf("%d", num2);  //只打印第二个数
 //	return 0;
 //}
 
@@ -2999,8 +3014,148 @@
 //	printf("%s", ch);
 //}
 
-//1.7.11
+//1.7.11  爬
+//int main()
+//{
+//	char letter_1[27], letter_2[27];  //字母对照表 1: 密文 2: 原文
+//	memset(letter_1, '0', sizeof(letter_1));  //初始化
+//	memset(letter_2, '0', sizeof(letter_2));  //初始化
+//	letter_1[26] = '\0';
+//	letter_2[26] = '\0';
+//	char secret[101], text[101];  //给定的文段
+//	char mubiao[101];  //待翻译的文段
+//	char print[101];
+//
+//	gets(secret);
+//	gets(text);
+//	gets(mubiao);
+//
+//	bool for_1 = true;
+//	for (int i = 0; i < strlen(secret); i++)
+//	{
+//		if ('0' == letter_1[secret[i] - 65])
+//		{
+//			letter_1[secret[i] - 65] = secret[i];
+//			letter_2[secret[i] - 65] = text[i];
+//		}
+//		else
+//		{
+//			if (letter_2[secret[i] - 65] != text[i])
+//			{
+//				printf("Failed");
+//				for_1 = !for_1;
+//				break;
+//			}
+//		}
+//	}
+//
+//	bool for_2 = true;
+//	for (int i = 0; i < strlen(mubiao); i++)
+//	{
+//		if (for_1 && '0' == letter_1[mubiao[i] - 65])
+//		{
+//			printf("Failed");
+//			for_2 = !for_2;
+//			break;
+//		}
+//		else
+//		{
+//			print[i] = letter_2[mubiao[i] - 65];
+//		}
+//	}
+//
+//	if (for_2)
+//	{
+//		for (int i = 0; i < strlen(mubiao); i++)
+//		{
+//			printf("%c", print[i]);
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+
+//1.7.13
+//int main()
+//{
+//	char c_arr[101];
+//	gets(c_arr);
+//	for (int i = 0; i < strlen(c_arr); i++)
+//	{
+//		if (c_arr[i] >= 97 && c_arr[i] <= 122)
+//		{
+//			c_arr[i] = c_arr[i] - 32;
+//		}
+//	}
+//	puts(c_arr);
+//	return 0;
+//}
+
+//1.7.14
+//int main()
+//{
+//	char c_arr[80];
+//	gets(c_arr);
+//	for (int i = 0; i < strlen(c_arr); i++)
+//	{
+//		if (c_arr[i] >= 97 && c_arr[i] <= 122)
+//		{
+//			c_arr[i] = c_arr[i] - 32;
+//		}
+//		else if (c_arr[i] >= 65 && c_arr[i] <= 90)
+//		{
+//			c_arr[i] = c_arr[i] + 32;
+//		}
+//	}
+//	puts(c_arr);
+//	return 0;
+//}
+
+//1.7.15
+//int main()
+//{
+//	int num = 0;
+//	scanf("%d", &num);
+//	getchar();
+//	for (int i = 0; i < num; i++)
+//	{
+//		char c_medicine_arr[21];
+//		gets(c_medicine_arr);
+//		if ((c_medicine_arr[0] >= 97) && (c_medicine_arr[0] <= 122))
+//		{
+//			c_medicine_arr[0] -= 32;
+//		}
+//		for (int ii = 1; ii < strlen(c_medicine_arr); ii++)
+//		{
+//			
+//			if (c_medicine_arr[ii] >= 65 && c_medicine_arr[ii] <= 90)
+//			{
+//				c_medicine_arr[ii] += 32;
+//			}
+//		}
+//		puts(c_medicine_arr);
+//	}
+//	return 0;
+//}
+
 int main()
 {
+	char arr_1[81];
+	char arr_2[81];
 
+	gets(arr_1);
+	gets(arr_2);
+	
+	int len_max = strlen(arr_1);
+
+
+	for (int i = 0; i < len_max; i++)
+	{
+		if (arr_1[i] != arr_2[i] && arr_1[i] + 32 != arr_2[i] && arr_1 - 32 != arr_2[i])
+		{
+			strcmp(arr_1[i], arr_2[i])
+		}
+	}
+	return 0;
 }
