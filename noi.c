@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 /*
-* 作者: 果壳里的幻想
+*作者: 果壳里的幻想
 */
 
 #include <stdio.h>
@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctype.h>
 
 
 //1.1.01
@@ -522,8 +523,9 @@
 //1.3.19.2
 //int main()
 //{
-//	long long int A, B;
-//	printf("%u", A * B);
+//	long long unsigned int A, B;
+//	scanf("%llu %llu", &A, &B);
+//	printf("%llu", A * B);
 //	return 0;
 //}
 
@@ -853,7 +855,8 @@
 //	else if (a > 1000)
 //	{
 //		s = 8 + ceil((double)(a - 1000) / 500) * 4;
-//	}if (b == 'y')
+//	}
+//  if (b == 'y')
 //	{
 //		s = s + 5;
 //	}
@@ -2122,7 +2125,7 @@
 //			if (num / i == 1) {
 //				num_1++;
 //			}
-//			num %= i;  //无论有没有 都要把之前的数字消掉
+//			num %= i;  //无论有没有 都要把第一个数字消掉
 //		}
 //	}
 //	return num_1;
@@ -2234,7 +2237,7 @@
 //{
 //	int n, i;//i需要定义在外面输出用 
 //	scanf("%d", &n);
-//	for (i = 2;; i++)	//死循环从2开始试数 
+//	for (i = 2; ; i++)	//死循环从2开始试数 
 //	{
 //		int a = 1;	//判断是否为素数  1是 0不是 
 //		for (int j = 2; j * j <= i; j++)//从2开始因子j的平方一直小于数i且i不能被j整除则说明 i是素数 
@@ -2805,7 +2808,10 @@
 //
 //		for (int ii = 0; ii < strlen(letter_char_list); ii++)
 //		{
-//			if (ch == letter_char_list[ii]) init = !init;
+//			if (ch == letter_char_list[ii])
+//			{
+//				init = !init;
+//			}
 //			if (init)
 //			{
 //				letter_bool_list[ii] = true;
@@ -3014,23 +3020,27 @@
 //	printf("%s", ch);
 //}
 
-//1.7.11  爬
+//1.7.11  // XYZ ABA
 //int main()
 //{
 //	char letter_1[27], letter_2[27];  //字母对照表 1: 密文 2: 原文
-//	memset(letter_1, '0', sizeof(letter_1));  //初始化
-//	memset(letter_2, '0', sizeof(letter_2));  //初始化
+//
+//	memset(letter_1, '0', 26);  //初始化
 //	letter_1[26] = '\0';
+//
+//	memset(letter_2, '0', 26);  //初始化
 //	letter_2[26] = '\0';
+//	//puts(letter_1);
+//	//printf("%d", strlen(letter_1));
 //	char secret[101], text[101];  //给定的文段
 //	char mubiao[101];  //待翻译的文段
-//	char print[101];
+//	//char print[101];
 //
 //	gets(secret);
+//	//printf("%d", strlen(secret));
 //	gets(text);
 //	gets(mubiao);
 //
-//	bool for_1 = true;
 //	for (int i = 0; i < strlen(secret); i++)
 //	{
 //		if ('0' == letter_1[secret[i] - 65])
@@ -3043,36 +3053,85 @@
 //			if (letter_2[secret[i] - 65] != text[i])
 //			{
 //				printf("Failed");
-//				for_1 = !for_1;
-//				break;
+//				return 0;
 //			}
 //		}
 //	}
 //
-//	bool for_2 = true;
-//	for (int i = 0; i < strlen(mubiao); i++)
+//	for (int i = 0; i < 26; i++)
 //	{
-//		if (for_1 && '0' == letter_1[mubiao[i] - 65])
+//		if ('0' == letter_1[i])
 //		{
 //			printf("Failed");
-//			for_2 = !for_2;
-//			break;
-//		}
-//		else
-//		{
-//			print[i] = letter_2[mubiao[i] - 65];
+//			return 0;
 //		}
 //	}
 //
-//	if (for_2)
+//	for (int i = 65; i < 91; i++)
 //	{
-//		for (int i = 0; i < strlen(mubiao); i++)
+//		int exist = 0;
+//		for (int ii = 0; ii < 26; ii++)
 //		{
-//			printf("%c", print[i]);
+//			if (i == letter_2[ii])
+//			{
+//				exist = !exist;
+//				break;
+//			}
+//		}
+//		if (!exist)
+//		{
+//			printf("Failed");
+//			return 0;
 //		}
 //	}
 //
+//	for (int i = 0; i < strlen(mubiao); i++)
+//	{
+//		printf("%c", letter_2[mubiao[i] - 65]);
+//	}
 //
+//	/*for (int i = 0; i < strlen(mubiao); i++)
+//	{
+//		printf("%c", print[i]);
+//	}*/
+//	return 0;
+//}
+
+//1.7.12
+//int main()
+//{
+//	char arr[50];
+//	gets(arr);
+//	int arr_len = strlen(arr);
+//	for (int i = 0; i < arr_len; i++)
+//	{
+//		if ((arr[i] >= 97 && arr[i] < 120) || (arr[i] >= 65 && arr[i] < 88))
+//		{
+//			arr[i] += 3;
+//		}
+//		else if ((arr[i] >= 120 && arr[i] <123) || (arr[i] >= 88 && arr[i] <= 91))
+//		{
+//			arr[i] -= 23;
+//		}
+//	}
+//
+//	for (int i = 0; i < arr_len; i++)
+//	{
+//		if (arr[i] >= 65 && arr[i] < 91)
+//		{
+//			arr[i] += 32;
+//		}
+//		else if (arr[i] >= 97 && arr[i] < 123)
+//		{
+//			arr[i] -= 32;
+//		}
+//	}
+//
+//	for (int i = arr_len - 1; i >= 0; i--)
+//	{
+//		printf("%c", arr[i]);
+//	}
+//	
 //	return 0;
 //}
 
@@ -3139,23 +3198,115 @@
 //	return 0;
 //}
 
+//1.7.16
 int main()
 {
 	char arr_1[81];
 	char arr_2[81];
-
 	gets(arr_1);
 	gets(arr_2);
 	
-	int len_max = strlen(arr_1);
-
+	int arr_1_len = strlen(arr_1);
+	int arr_2_len = strlen(arr_2);
+	int len_max = arr_1_len>arr_2_len? arr_1_len:arr_2_len;
 
 	for (int i = 0; i < len_max; i++)
 	{
-		if (arr_1[i] != arr_2[i] && arr_1[i] + 32 != arr_2[i] && arr_1 - 32 != arr_2[i])
+		if (((arr_1[i] >= 65 && arr_1[i] < 91)||(arr_1[i] >= 97 && arr_1[i] < 123))
+			&&((arr_2[i] >= 65 && arr_2[i] < 91) || (arr_2[i] >= 97 && arr_2[i] < 123))
+			&& (arr_1[i] == arr_2[i] || arr_1[i] + 32 == arr_2[i] || arr_1[i] - 32 == arr_2[i]))
 		{
-			strcmp(arr_1[i], arr_2[i])
+			continue;
+		}
+		else if ('\0' != arr_1[i] && '\0' != arr_2[i])
+		{
+			if (arr_1[i] == arr_2[i])
+			{
+				continue;
+			}
+			else if (strcmp(&arr_1[i], &arr_2[i]) > 0)
+			{
+				printf(">");
+			}
+			else
+			{
+				printf("<");
+			}
+			return 0;
+		}
+		else if ('\0' == arr_1[i] && '\0' != arr_2[i])
+		{
+			printf("<");
+			return 0;
+		}
+		else if ('\0' == arr_2[i] && '\0' != arr_1[i])
+		{
+			printf(">");
+			return 0;
 		}
 	}
+	printf("=");
 	return 0;
 }
+
+//1.7.17
+//int main()
+//{
+//	char arr_1[100000] = "0";
+//	char arr_2[100000] = "0";
+//	gets(arr_1);
+//	gets(arr_2);
+//	int i = 0, j = 0;
+//	for (i = 0, j = 0; i < strlen(arr_1) && j < strlen(arr_2); i++, j++)
+//	{
+//		while(' ' == arr_1[i] || ' ' == arr_2[j])
+//		{
+//			if (' ' == arr_1[i])
+//			{
+//				i++;
+//			}
+//			if (' ' == arr_2[j])
+//			{
+//				j++;
+//			}
+//		}
+//
+//		if (arr_1[i] != arr_2[j] && arr_1[i]+32!=arr_2[j]&& arr_1[i] - 32 != arr_2[j])
+//		{
+//			printf("NO");
+//			return 0;
+//		}
+//	}
+//	if (i != strlen(arr_1) || j != strlen(arr_2))
+//	{
+//		printf("NO");
+//		return 0;
+//	}
+//	printf("YES");
+//	return 0;
+//}
+
+//1.7.18 爬
+//void zc(char a[], char b[], int max, int min)
+//{
+//	int j = 0;
+//	for (int i = 0; i < max; i++)
+//	{
+//		do
+//		{
+//			if (a[i] == b[j])
+//			{
+//				break;
+//			}
+//		} while (j < min);
+//	}
+//}
+//int main()
+//{
+//	char s1[200], s2[200];
+//	gets(s1);
+//	gets(s2);
+//	strlen(s1) > strlen(s2) ? zc(s1, s2, strlen(s1), strlen(s2)) : zc(s2, s1, strlen(s2), strlen(s1));
+//
+//	return 0;
+//}
