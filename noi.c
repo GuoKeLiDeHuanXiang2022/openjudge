@@ -3404,20 +3404,32 @@
 //}
 
 // 1.7.20
-#define N 33
-#define uint64_t unsigned long long int
-char * def(char * str)
-{
-     uint64_t len = strlen(str);
-     if ()
-
-}
-int main(void)
-{
-    char arr[N] = "0";
-    fgets(arr, sizeof arr, stdin);
-    def(arr)
-}
+//#define N 33
+//#define uint64_t unsigned long long int
+//char * def(char * str)
+//{
+//     uint64_t len = strlen(str);
+//     if (*(str+len-2)=='e' && *(str+len-1)=='r')
+//     {
+//         *(str+len-2) = '\0';
+//     }
+//     else if(*(str+len-2)=='l' && *(str+len-1)=='y')
+//     {
+//         *(str+len-2) = '\0';
+//     }
+//     else if (*(str+len-3)=='i' && *(str+len-2)=='n' && *(str+len-1)=='g')
+//     {
+//         *(str+len-3) = '\0';
+//     }
+//     return str;
+//}
+//int main(void)
+//{
+//    char arr[N] = "0";
+//    fgets(arr, sizeof arr, stdin);
+//    arr[strlen(arr)-1] = '\0';
+//    printf("%s", def(arr));
+//}
 
 // 1.8.01
 //int main()
