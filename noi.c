@@ -3345,7 +3345,7 @@
 // 1.7.19
 int main()
 {
-
+    printf("1");
 	return 0;
 }
 
