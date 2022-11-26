@@ -3198,58 +3198,42 @@
 //	return 0;
 //}
 
-//1.7.16
-int main()
-{
-	char arr_1[81];
-	char arr_2[81];
-	gets(arr_1);
-	gets(arr_2);
-	
-	int arr_1_len = strlen(arr_1);
-	int arr_2_len = strlen(arr_2);
-	int len_max = arr_1_len>arr_2_len? arr_1_len:arr_2_len;
+// 1.7.16.01  //有错，待改
+//#define N 81
+//char* my_strlwr(char* arr)
+//{
+//	char* re = arr;
+//	while (*arr != '\0')
+//	{
+//		*arr = tolower(*arr);
+//		arr++;
+//	}
+//	return re;
+//}
+//int main()
+//{
+//	char arr1[N] = "0";
+//	gets(arr1);
+//	char arr2[N] = "0";
+//	gets(arr2);
+//	my_strlwr(arr1);
+//	my_strlwr(arr2);
+//	if (strcmp(arr1, arr2) == 0)
+//	{
+//		printf("=");
+//	}
+//	else if (strcmp(arr1, arr2) > 0)
+//	{
+//		printf(">");
+//	}
+//	else if (strcmp(arr1, arr2) < 0)
+//	{
+//		printf("<");
+//	}
+//	return 0;
+//}
 
-	for (int i = 0; i < len_max; i++)
-	{
-		if (((arr_1[i] >= 65 && arr_1[i] < 91)||(arr_1[i] >= 97 && arr_1[i] < 123))
-			&&((arr_2[i] >= 65 && arr_2[i] < 91) || (arr_2[i] >= 97 && arr_2[i] < 123))
-			&& (arr_1[i] == arr_2[i] || arr_1[i] + 32 == arr_2[i] || arr_1[i] - 32 == arr_2[i]))
-		{
-			continue;
-		}
-		else if ('\0' != arr_1[i] && '\0' != arr_2[i])
-		{
-			if (arr_1[i] == arr_2[i])
-			{
-				continue;
-			}
-			else if (strcmp(&arr_1[i], &arr_2[i]) > 0)
-			{
-				printf(">");
-			}
-			else
-			{
-				printf("<");
-			}
-			return 0;
-		}
-		else if ('\0' == arr_1[i] && '\0' != arr_2[i])
-		{
-			printf("<");
-			return 0;
-		}
-		else if ('\0' == arr_2[i] && '\0' != arr_1[i])
-		{
-			printf(">");
-			return 0;
-		}
-	}
-	printf("=");
-	return 0;
-}
-
-//1.7.17
+// 1.7.17
 //int main()
 //{
 //	char arr_1[100000] = "0";
@@ -3286,27 +3270,246 @@ int main()
 //	return 0;
 //}
 
-//1.7.18 爬
-//void zc(char a[], char b[], int max, int min)
+// 1.7.18 写的有点烂 有时间可以优化一下
+//#define N 201
+//int isinit(char* long_arr, int max_len, char* short_arr, int min_len)
 //{
-//	int j = 0;
-//	for (int i = 0; i < max; i++)
+//	for (int i = 0; i < max_len-min_len+1; i++)
 //	{
-//		do
+//		int j = 0;
+//		for (j = 0; j < min_len; j++)
 //		{
-//			if (a[i] == b[j])
+//			if (*(long_arr + i) != *(short_arr + j))
 //			{
+//				i -= j;
 //				break;
 //			}
-//		} while (j < min);
+//			else  // 相等
+//			{
+//				i++;
+//				continue;
+//			}
+//		}
+//		if (j == min_len)
+//		{
+//			return 1;
+//		}
 //	}
+//	return 0;
 //}
 //int main()
 //{
-//	char s1[200], s2[200];
-//	gets(s1);
-//	gets(s2);
-//	strlen(s1) > strlen(s2) ? zc(s1, s2, strlen(s1), strlen(s2)) : zc(s2, s1, strlen(s2), strlen(s1));
-//
+//	char s1[N] = "0";
+//	scanf("%s", s1);
+//	char s2[N] = "0";
+//	scanf("%s", s2);
+//	int s1_len = strlen(s1);
+//	int s2_len = strlen(s2);
+//	int len_max = 0;
+//	int len_min = 0;
+//	if (s1_len > s2_len)
+//	{
+//		len_max = s1_len;
+//		len_min = s2_len;
+//	}
+//	else
+//	{
+//		len_max = s2_len;
+//		len_min = s1_len;
+//	}
+//	if (len_max == s1_len)
+//	{
+//		if (isinit(s1, len_max, s2, len_min))
+//		{
+//			printf("%s is substring of %s", s2, s1);
+//		}
+//		else
+//		{
+//			printf("No substring");
+//		}
+//	}
+//	else
+//	{
+//		if (isinit(s2, len_max, s1, len_min))
+//		{
+//			printf("%s is substring of %s", s1, s2);
+//		}
+//		else
+//		{
+//			printf("No substring");
+//		}
+//	}
 //	return 0;
 //}
+
+// 1.7.19
+int main()
+{
+
+	return 0;
+}
+
+// 1.8.01
+//int main()
+//{
+//	int arr[5][5];
+//	for (int h = 0; h < 5; h++)
+//	{
+//		for (int l = 0; l < 5; l++)
+//		{
+//			scanf("%d", &arr[h][l]);
+//		}
+//	}
+//	int m, n;
+//	scanf("%d%d", &m, &n);
+//	for (int h = 0; h < 5; h++)
+//	{
+//		for (int l = 0; l < 5; l++)
+//		{
+//			if (h == m - 1)
+//			{
+//				printf("%d ", arr[n-1][l]);
+//			}
+//			else if (h == n - 1)
+//			{
+//				printf("%d ", arr[m-1][l]);
+//			}
+//			else
+//			{
+//				printf("%d ", arr[h][l]);
+//			}
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//1.8.02
+//int main()
+//{
+//	int n, i, j;
+//	scanf("%d%d%d", &n, &i, &j);
+//	for (int z = 1; z <= n; z++)
+//	{
+//		printf("(%d,%d) ", i, z);
+//	}
+//	printf("\n");
+//	for (int z = 1; z <= n; z++)
+//	{
+//		printf("(%d,%d) ", z, j);
+//	}
+//	printf("\n");
+//	for (int z = 1; z <= n; z++)
+//	{
+//		if (1 <= z + j - i && z + j - i<=n)
+//			printf("(%d,%d) ", z, z+j-i);
+//	}
+//	printf("\n");
+//	for (int z = 1; z <= n; z++)
+//	{
+//		if (1<=i + j - z && i + j - z<=n)
+//			printf("(%d,%d) ", i+j-z, z);
+//	}
+//	printf("\n");
+//	for (int z = 1; z <= n; z++)
+//	return 0;
+//}
+
+//1.8.03
+//int main()
+//{
+//	int arr[99][99];
+//	int h_max = 0;
+//	int l_max = 0;
+//	int sum = 0;
+//	scanf("%d%d", &h_max, &l_max);
+//	for (int h = 0; h < h_max; h++)
+//	{
+//		for (int l = 0; l < l_max; l++)
+//		{
+//			scanf("%d", &arr[h][l]);
+//			if ((0 == h) || (h_max - 1 == h) || (0 == l) || (l_max - 1 == l))
+//			{
+//				sum += arr[h][l];
+//			}
+//			
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+
+//1.8.04
+//int arr[99][99] = { 0 };
+//int main()
+//{
+//	int h_arr[99] = { 0 };
+//	int l_arr[99] = { 0 };
+//	int n = 0;
+//	scanf("%d", &n);
+//	for (int h = 0; h < n; h++)
+//	{
+//		for (int l = 0; l < n; l++)
+//		{
+//			scanf("%d", &arr[h][l]);
+//			if (1 == arr[h][l])
+//			{
+//				h_arr[h] += 1;
+//				l_arr[l] += 1;
+//			}
+//		}
+//	}
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		if ((0 == h_arr[i] % 2) && (0 == l_arr[i] % 2))
+//		{
+//			continue;
+//		}
+//		else
+//		{
+//
+//		}
+//	}
+//	return 0;
+//}
+
+//1.8.09
+//#define N 99
+//int main()
+//{
+//    int a[N][N] = {0};
+//    int b[N][N] = {0};
+//    int re[N][N] = {0};
+//    int n = 0, m = 0, k = 0;
+//    scanf("%d%d%d", &n, &m, &k);
+//    for (int h = 0; h < n; h++)
+//    {
+//        for (int l = 0; l < m; l++)
+//        {
+//            scanf("%d", &a[h][l]);
+//        }
+//    }
+//    for (int h = 0; h < m; h++)
+//    {
+//        for (int l = 0; l < k; l++)
+//        {
+//            scanf("%d", &b[h][l]);
+//        }
+//    }
+//    for (int j = 0; j < n; j++)
+//    {
+//        for (int p = 0; p < k; p++)
+//        {
+//            for (int i = 0; i < m;i++)
+//            {
+//                re[j][p] += a[j][i]*b[i][p];
+//            }
+//            printf("%d ", re[j][p]);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+
+
