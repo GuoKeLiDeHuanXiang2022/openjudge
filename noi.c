@@ -3431,6 +3431,12 @@
 //    printf("%s", def(arr));
 //}
 
+// 1.7.21
+int main()
+{
+    return 0;
+}
+
 // 1.8.01
 //int main()
 //{
