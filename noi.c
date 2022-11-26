@@ -3343,10 +3343,80 @@
 //}
 
 // 1.7.19
-int main()
+//#define N 31
+//#define INT_64 unsigned long long int
+//int def(char*str1, char *str2)
+//{
+//    INT_64 str1_len = strlen(str1);
+//    INT_64 str2_len = strlen(str2);
+//    for (int i = 0; i<str1_len+str2_len; i++)
+//    {
+//        int j = 0;
+//        for (j = 0; j<str2_len; j++)
+//        {
+//            if(( *(str1+ (i % str1_len) ) )!=(*(str2+j)))
+//            {
+//                i -= j;
+//                break;
+//            }
+//            else
+//            {
+//                i++;
+//                continue;
+//            }
+//        }
+//        if(j==str2_len)
+//        {
+//            return 1;
+//        }
+//    }
+//    return 0;
+//}
+//int main(void)
+//{
+//    char arr1[N] = "0";
+//    scanf("%s", arr1);
+//    char arr2[N] = "0";
+//    scanf("%s", arr2);
+//    if (strlen(arr1)>strlen(arr2))
+//    {
+//        if (def(arr1, arr2))
+//        {
+//            printf("true");
+//        }
+//        else
+//        {
+//            printf("false");
+//        }
+//    }
+//    else
+//    {
+//        if (def(arr2, arr1))
+//        {
+//            printf("true");
+//        }
+//        else
+//        {
+//            printf("false");
+//        }
+//    }
+//	return 0;
+//}
+
+// 1.7.20
+#define N 33
+#define uint64_t unsigned long long int
+char * def(char * str)
 {
-    printf("1");
-	return 0;
+     uint64_t len = strlen(str);
+     if ()
+
+}
+int main(void)
+{
+    char arr[N] = "0";
+    fgets(arr, sizeof arr, stdin);
+    def(arr)
 }
 
 // 1.8.01
