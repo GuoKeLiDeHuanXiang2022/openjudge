@@ -3432,10 +3432,122 @@
 //}
 
 // 1.7.21
-int main()
-{
-    return 0;
-}
+//int main()
+//{
+//    char input_arr[102] = "0";
+//    fgets(input_arr, sizeof(input_arr), stdin);
+//    if ('\n' == input_arr[strlen(input_arr)-1])
+//    {
+//        input_arr[strlen(input_arr)-1] = 0;
+//    }
+//
+//    char target_arr[102] = "0";
+//    fgets(target_arr, sizeof(target_arr), stdin);
+//    if('\n'==target_arr[strlen(target_arr)-1])
+//    {
+//        target_arr[strlen(target_arr)-1] = 0;
+//    }
+//
+//    char instead_arr[102] = "0";
+//    fgets(instead_arr, sizeof(instead_arr), stdin);
+//    if('\n'==instead_arr[strlen(instead_arr)-1])
+//    {
+//        instead_arr[strlen(instead_arr)-1] = 0;
+//    }
+//
+//    char temp_arr[102] = "0";
+//
+//    int point = 0;
+//    for (int i = 0; i < strlen(input_arr)+1; i++)
+//    {
+//        if (input_arr[i] == ' ' || input_arr[i] == '\0')
+//        {
+//            temp_arr[point] = '\0';
+//            point = 0;
+//            if(input_arr[i] == '\0')
+//            {
+//                if (0 == strcmp(temp_arr, target_arr))
+//                {
+//                    printf("%s", instead_arr);
+//                } else
+//                {
+//                    printf("%s", temp_arr);
+//                }
+//            }
+//            else
+//            {
+//                if (0 == strcmp(temp_arr, target_arr))
+//                {
+//                    printf("%s ", instead_arr);
+//                } else
+//                {
+//                    printf("%s ", temp_arr);
+//                }
+//            }
+//        }
+//        else
+//        {
+//            temp_arr[point] = input_arr[i];
+//            point++;
+//        }
+//    }
+//    return 0;
+//}
+
+// 1.7.22
+//void change_letter(char * str)
+//{
+//    if ('\0'!=*str)
+//    {
+//        if ('a'<=*str&&*str<='z')
+//        {
+//            *str = toupper(*str);
+//        }
+//        else if('A'<=*str&&*str<='Z')
+//        {
+//            *str = tolower(*str);
+//        }
+//        change_letter(str+1);
+//    }
+//}
+//int main(void)
+//{
+//    char target_email[52] = "0";
+//    fgets(target_email, sizeof(target_email), stdin);
+//    if ('\n'==target_email[strlen(target_email)-1])
+//    {
+//        target_email[strlen(target_email)-1] = 0x0;
+//    }
+//
+//    int list_num = 0;
+//    scanf("%d", &list_num);
+//
+//    int flag = 1;
+//
+//    for (int i = 0; i<list_num; i++)
+//    {
+//        char each_name[52] = "0";
+//        scanf("%s", each_name);
+//
+//        char each_key[52] = "0";
+//        scanf("%s", each_key);
+//
+//        char each_email[52] = "0";
+//        scanf("%s", each_email);
+//
+//        if (0==strcmp(target_email, each_email))
+//        {
+//            flag = 0;
+//            change_letter(each_key);
+//            printf("%s %s\n", each_name, each_key);
+//        }
+//    }
+//    if (flag)
+//    {
+//        printf("empty");
+//    }
+//    return 0;
+//}
 
 // 1.8.01
 //int main()
