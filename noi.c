@@ -3549,6 +3549,69 @@
 //    return 0;
 //}
 
+// 1.7.23
+//int main(void)
+//{
+//    char words_arr[202] = "0";
+//    char return_arr[202] = "0";
+//    fgets(words_arr, sizeof words_arr, stdin);
+//    if ('\n'==words_arr[strlen(words_arr)-1])
+//    {
+//        words_arr[strlen(words_arr)-1] = 0x0;
+//    }
+//    int count = 0;
+//    for (int i = 0; '\0'!=*(words_arr+i); i++)
+//    {
+//        if (' '==*(words_arr+i) && ' '==*(words_arr+i+1))
+//        {
+//            continue;
+//        }
+//        return_arr[count++] = *(words_arr+i);
+//    }
+//    printf("%s", return_arr);
+//    return 0;
+//}
+
+// 1.7.24
+//int main(void)
+//{
+//    char input_arr[1002] = "0";
+//    fgets(input_arr, sizeof input_arr, stdin);
+//    if ('\n'==input_arr[strlen(input_arr)-1])
+//    {
+//        input_arr[strlen(input_arr)-1] = '\0';
+//    }
+//
+//    int count = 0;
+//    for (int i = 0; '\0'!=*(input_arr+i); i++)
+//    {
+//        if (' '==*(input_arr+i) && ' '==*(input_arr+i+1))
+//        {
+//            continue;
+//        }
+//
+//        if (' '==*(input_arr+i))
+//        {
+//            printf("%d,", count);
+//            count = 0;
+//        }
+//        else
+//        {
+//            count++;
+//        }
+//
+//    }
+//    printf("%d ", count);
+//    return 0;
+//}
+
+// 1.7.27
+//int main(void)
+//{
+//
+//    return 0;
+//}
+
 // 1.8.01
 //int main()
 //{
@@ -3712,4 +3775,65 @@
 //    return 0;
 //}
 
+// 1.9.01
+//int main(void)
+//{
+//    int input_arr_len = 0;
+//    scanf("%d", &input_arr_len);
+//
+//    int *p = (int *)malloc(sizeof(int)*input_arr_len);
+//
+//    for (int *pt = p; pt<p+input_arr_len; pt++)
+//    {
+//        scanf("%d", pt);
+//    }
+//
+//    int target = 0;
+//    scanf("%d", &target);
+//
+//    int count = 0;
+//    for (int *pt = p; pt<p+input_arr_len; pt++)
+//    {
+//        count++;
+//        if (*pt==target)
+//        {
+//            printf("%d", count);
+//            return 0;
+//        }
+//    }
+//    printf("-1");
+//    return 0;
+//}
 
+// 1.9.02
+//struct STU
+//{
+//    int score;
+//    char name[22];
+//};
+//int main()
+//{
+//    int num = 0;
+//    scanf("%d", &num);
+//
+//    struct STU stu[num];
+//
+//    for (int i = 0; i<num; i++)
+//    {
+//        scanf("%d", &stu[i].score);
+//        scanf("%s", stu[i].name);
+//    }
+//
+//    int max = stu[0].score;
+//    int loca = 0;
+//    for (int i = 0; i<num; i++)
+//    {
+//        if (max<stu[i].score)
+//        {
+//            loca = i;
+//            max = stu[i].score;
+//        }
+//    }
+//    printf("%s", stu[loca].name);
+//    return 0;
+//}
