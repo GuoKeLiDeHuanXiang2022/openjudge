@@ -3605,6 +3605,48 @@
 //    return 0;
 //}
 
+// 1.7.25
+int main(void)
+{
+    char input_arr[30000] = "0";
+    fgets(input_arr, sizeof input_arr, stdin);
+    if ('\n'==input_arr[strlen(input_arr)-1])
+    {
+        input_arr[strlen(input_arr)-1] = 0x0;
+    }
+
+    char* max_word = NULL;
+    char* min_word = NULL;
+    int count = 0;
+    int max = 0;
+    int min = 101;
+    int len = strlen(input_arr);
+    for (int i = 0; i < len+1; i++)
+    {
+        if (' '==*(input_arr+i)||'\0'==*(input_arr+i))
+        {
+            if (max<count)
+            {
+                max = count;
+                max_word = input_arr+i-count;
+            }
+            if (min>count)
+            {
+                min = count;
+                min_word = input_arr+i-count;
+            }
+            count = 0;
+            *(input_arr+i) = '\0';
+        }
+        else
+        {
+            count++;
+        }
+    }
+    printf("%s\n%s", max_word, min_word);
+    return 0;
+}
+
 // 1.7.27
 //int main(void)
 //{
@@ -3835,5 +3877,102 @@
 //        }
 //    }
 //    printf("%s", stu[loca].name);
+//    return 0;
+//}
+
+// 1.9.03
+//#define N 7
+//int main(void)
+//{
+//    int school_time[N] = {0};
+//    int after_time[N] = {0};
+//    int max_time = 0;
+//    int max_date = 0;
+//    for (int i = 0; i < 7; i++)
+//    {
+//        scanf("%d %d", &school_time[i], &after_time[i]);
+//    }
+//    max_time = *school_time + *after_time;
+//    max_date = 0;
+//    for (int i = 1; i < 7; i++)
+//    {
+//        if (max_time<*(school_time+i)+*(after_time+i))
+//        {
+//            max_time = *(school_time+i)+*(after_time+i);
+//            max_date = i;
+//        }
+//    }
+//    if (max_time>8)
+//    {
+//        printf("%d", max_date+1);
+//    }
+//    else
+//    {
+//        printf("0");
+//    }
+//    return 0;
+//}
+
+// 1.9.05
+//int main(void)
+//{
+//    int input_len = 0;
+//    scanf("%d", &input_len);
+//
+//    int *p = (int *) malloc(sizeof(int)*input_len);
+//
+//    for (int i = 0;i<input_len; i++)
+//    {
+//        scanf("%d", (p+i));
+//    }
+//
+//    int min = *p;
+//    int max = *p;
+//    for (int i = 1; i< input_len; i++)
+//    {
+//        if (min>*(p+i))
+//        {
+//            min = *(p+i);
+//        }
+//        if (max<*(p+i))
+//        {
+//            max = *(p+i);
+//        }
+//    }
+//    printf("%d", max-min);
+//    return 0;
+//}
+
+// 1.9.07
+//int main(void)
+//{
+//    int input_len = 0;
+//    scanf("%d", &input_len);
+//
+//    int *p = (int *) malloc(sizeof(int)*input_len);
+//
+//    for (int i = 0; i < input_len; i++)
+//    {
+//        scanf("%d", (p+i));
+//    }
+//
+//    int max = *p;
+//    for (int i = 1; i < input_len; i++)
+//    {
+//        if (max<*(p+i))
+//        {
+//            max = *(p+i);
+//        }
+//    }
+//
+//    int sum = 0;
+//    for (int i = 0; i < input_len; i++)
+//    {
+//        if (*(p+i)!=max)
+//        {
+//            sum += *(p+i);
+//        }
+//    }
+//    printf("%d", sum);
 //    return 0;
 //}
