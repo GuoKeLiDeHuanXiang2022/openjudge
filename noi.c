@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <ctype.h>
-
+#include <time.h>
 
 //1.1.01
 //int main()
@@ -3776,7 +3776,274 @@
 //    return 0;
 //}
 
+// 1.7.28.01
+//int def(char* s1,char* s2)
+//{
+//    if (s1==NULL||s2==NULL)
+//    {
+//        return 0;
+//    }
+//    int s1_len = (int)strlen(s1);
+//    int s1_count = 0;
+//    int s2_count = 0;
+//    int i = 0;
+//    for (i = s1_len-1; i > -1; i--)
+//    {
+//        if (' '!=*(s1+i))
+//        {
+//            s1_count++;
+//        }
+//        else
+//        {
+//            strncpy(s2+s2_count, s1+i+1, s1_count);
+//            s2_count+=s1_count;
+//            s1_count = 0;
+//            *(s2+s2_count) = ' ';
+//            s2_count++;
+//        }
+//    }
+//    strncpy(s2+s2_count, s1+i+1, s1_count);
+//    s2_count+=s1_count;
+//    *(s2+s2_count) = ' ';
+//    return 1;
+//}
+//int main(void)
+//{
+//    char arr1[101] = {0};
+//    char arr2[101] = {0};
+//    gets(arr1);
+//    if (def(arr1, arr2))
+//    {
+//        printf("%s", arr2);
+//    }
+//    else
+//    {
+//        printf("error");
+//    }
+//    return 0;
+//}
+
+// 1.7.28.02  chatGPT给的答案改了改 学到了很多 (人工智能真的好强，我真的好菜
+//int main()
+//{
+//    char line[101] = {0};  // 存储输入的字符串
+//    char *words[101] = {NULL};  // 存储分割后的单词
+//
+//    // 读入一行英文
+//    gets(line);
+//
+//    // 将字符串分割为单词，并将单词存储在 words 数组中
+//    char *word = strtok(line, " ");  // 从 line 中分割出第一个单词
+//    int i = 0;
+//    while (word != NULL)
+//    {
+//        words[i] = word;  // 将单词存储在 words 数组中
+//        word = strtok(NULL, " ");  // 从 line 中分割出下一个单词
+//        i++;
+//    }
+//
+//    // 将 words 数组倒排
+//    for (int j = 0; j < i / 2; j++)
+//    {
+//        char *temp = words[j];
+//        words[j] = words[i - j - 1];
+//        words[i - j - 1] = temp;
+//    }
+//
+//    // 将倒排后的单词输出，并用空格分隔
+//    for (int j = 0; j < i; j++)
+//    {
+//        printf("%s ", words[j]);
+//    }
+//    printf("\n");
+//
+//    return 0;
+//}
+
 // 1.7.29
+//int main(void)
+//{
+//    char input[14] = {0};
+//    gets(input);
+//
+//    int num_list[10] = {0};
+//    for (int i = 0,j = 0; 0!=*(input+i); i++)
+//    {
+//        if ('-'!=*(input+i))
+//        {
+//            *(num_list+j) = *(input+i)-'0';
+//            j++;
+//        }
+//    }
+//    if (num_list[9] == 'X'-'0')
+//    {
+//        num_list[9] = 10;
+//    }
+//
+//    int sum = 0;
+//    for (int i = 1;i<10;i++)
+//    {
+//        sum += (num_list[i-1]*i);
+//    }
+//
+//    if (num_list[9] == sum%11)
+//    {
+//        printf("Right");
+//    }
+//    else
+//    {
+//        if (10!=sum%11)
+//        {
+//            *(input+12) = (char)(sum%11 + '0');
+//        }
+//        else
+//        {
+//            *(input+12) = 'X';
+//        }
+//        printf("%s", input);
+//    }
+//    return 0;
+//}
+
+// 1.7.30  // 超时了 之后再优化
+//int longest_common_substring(char *s1, char *s2)
+//{
+//    int max_length = 0;
+//    for (int i = 0; i < strlen(s1); i++)
+//    {
+//        for (int j = 0; j < strlen(s2); j++)
+//        {
+//            int length = 0;
+//            while (s1[(i + length) % strlen(s1)] == s2[(j + length) % strlen(s2)])
+//            {
+//                length++;
+//            }
+//            if (max_length < length)
+//            {
+//                max_length = length;
+//            }
+//        }
+//    }
+//    return max_length;
+//}
+//int main(void)
+//{
+//    char str1[256] = {0};
+//    scanf("%s", str1);
+//    char str2[256] = {0};
+//    scanf("%s", str2);
+//    printf("%d", longest_common_substring(str1, str2));
+//    return 0;
+//}
+
+// 1.7.31
+//void deal(char* s1, char* s2)
+//{
+//    char *start = s1;  // 重复开始的位置
+//    char *end = s1+1;  // 重复结束的位置
+//    while(end<s1+strlen(s1))
+//    {
+//        if (*start==*end)
+//        {
+//            end++;
+//        }
+//        else
+//        {
+//            sprintf(s2, "%s%d%c", s2, (int)(end-start), *start);
+//            start = end;
+//            end = start+1;
+//        }
+//    }
+//    sprintf(s2, "%s%d%c", s2, (int)(end-start), *start);
+//}
+//int main()
+//{
+//    char input[1001]  = {0};
+//    gets(input);
+//    char output[2001] = {0};
+//    deal(input, output);
+//    printf("%s", output);
+//    return(0);
+//}
+
+// 1.7.32
+//char *upper(char* str)
+//{
+//    if (str==NULL)
+//    {
+//        return NULL;
+//    }
+//    char *p = str;
+//    while(*str!=0)
+//    {
+//        *str = (char)toupper(*str);
+//        str++;
+//    }
+//    return p;
+//}
+//void deal(char* s1, char* s2)
+//{
+//    char *start = s1;  // 重复开始的位置
+//    char *end = s1+1;  // 重复结束的位置
+//    while(end<s1+strlen(s1))
+//    {
+//        if (*start==*end)
+//        {
+//            end++;
+//        }
+//        else
+//        {
+//            sprintf(s2, "%s(%c,%d)", s2, *start,  (int)(end-start));
+//            start = end;
+//            end = start+1;
+//        }
+//    }
+//    sprintf(s2, "%s(%c,%d)", s2, *start,  (int)(end-start));
+//}
+//int main(void)
+//{
+//    char input[1001] = {0};
+//    gets(input);
+//    upper(input);
+//    //printf("%s", input);
+//    char output[5001] = {0};
+//    deal(input, output);
+//    printf("%s", output);
+//    return 0;
+//}
+
+// 1.7.33
+//void reverse(char* str)
+//{
+//    int len = (int)strlen(str);
+//    if (len>1)
+//    {
+//        char temp = *str;
+//        *str = *(str+len-1);
+//        *(str+len-1) = 0;
+//        reverse(str+1);
+//        *(str+len-1) = temp;
+//    }
+//}
+//int main(void)
+//{
+//    char input[101] = {0};
+//    char input_cpy[101] = {0};
+//    gets(input);
+//    strcpy(input_cpy, input);
+//    reverse(input_cpy);
+////    printf("%s", input_cpy);
+//    if (0==strcmp(input,input_cpy))
+//    {
+//        printf("yes");
+//    }
+//    else
+//    {
+//        printf("no");
+//    }
+//
+//    return 0;
+//}
 
 // 1.8.01
 //int main()
@@ -3840,7 +4107,6 @@
 //			printf("(%d,%d) ", i+j-z, z);
 //	}
 //	printf("\n");
-//	for (int z = 1; z <= n; z++)
 //	return 0;
 //}
 
@@ -3870,10 +4136,10 @@
 
 //1.8.04
 //int arr[99][99] = { 0 };
+//int h_arr[99] = { 0 };
+//int l_arr[99] = { 0 };
 //int main()
 //{
-//	int h_arr[99] = { 0 };
-//	int l_arr[99] = { 0 };
 //	int n = 0;
 //	scanf("%d", &n);
 //	for (int h = 0; h < n; h++)
@@ -3889,6 +4155,9 @@
 //		}
 //	}
 //
+//    int h = -1;
+//    int l = -1;
+//    bool flag = true;
 //	for (int i = 0; i < n; i++)
 //	{
 //		if ((0 == h_arr[i] % 2) && (0 == l_arr[i] % 2))
@@ -3897,10 +4166,134 @@
 //		}
 //		else
 //		{
-//
+//            flag = false;
+//            if (0 != h_arr[i] % 2)
+//            {
+//                if (-1==h)
+//                {
+//                    h = i;
+//                }
+//                else
+//                {
+//                    printf("Corrupt");
+//                    return 0;
+//                }
+//            }
+//            if (0 != l_arr[i] % 2)
+//            {
+//                if (-1==l)
+//                {
+//                    l = i;
+//                }
+//                else
+//                {
+//                    printf("Corrupt");
+//                    return 0;
+//                }
+//            }
 //		}
 //	}
+//    if(flag)
+//    {
+//        printf("OK");
+//    }
+//    else
+//    {
+//        printf("%d %d", h+1, l+1);
+//    }
 //	return 0;
+//}
+
+// 1.8.05
+//int main(void)
+//{
+//    int num[5][5] = {0};
+//    int h_max[5] = {0};
+//    int l_min[5] = {0};
+//    for (int h = 0; h<5; h++)
+//    {
+//        for (int l = 0; l<5; l++)
+//        {
+//            scanf("%d", &num[h][l]);
+//
+//            if (l==0)
+//            {
+//                h_max[h] = num[h][0];
+//            }
+//            else if (h_max[h] < num[h][l])
+//            {
+//                h_max[h] = num[h][l];
+//            }
+//
+//            if (h==0)
+//            {
+//                l_min[l] = num[0][l];
+//            }
+//            else if (l_min[l]>num[h][l])
+//            {
+//                l_min[l] = num[h][l];
+//            }
+//        }
+//    }
+//    bool flag = true;
+//    for (int h = 0; h<5; h++)
+//    {
+//        for (int l = 0; l<5; l++)
+//        {
+//            if ((num[h][l] == h_max[h]) && (num[h][l] == l_min[l]))
+//            {
+//                flag = false;
+//                printf("%d %d %d", h+1, l+1, num[h][l]);
+//            }
+//        }
+//    }
+//    if (flag)
+//    {
+//        printf("not found");
+//    }
+//    return 0;
+//}
+
+// 1.8.06
+//int main(void)
+//{
+//    int m = 0;
+//    int n = 0;
+//    scanf("%d %d", &m, &n);
+//
+//    int *p1 = (int *)malloc(sizeof(int)*m*n);
+//    int *p2 = (int *)malloc(sizeof(int)*m*n);
+//
+//    for (int * p = p1;p<p1+m*n;p++)
+//    {
+//        scanf("%d", p);
+//    }
+//
+//    for (int * p = p2;p<p2+m*n;p++)
+//    {
+//        scanf("%d", p);
+//    }
+//
+//    int count = 0;
+//    for (int i = 0; i<m*n; i++, p1++, p2++)
+//    {
+//        if (*p1==*p2)
+//        {
+//            count++;
+//        }
+//    }
+//
+//    printf("%.2lf", 100 * (float)count / (float)(n*m));
+//
+//    free(p1-m*n);  // p1已经被改动了， 不能直接free p1
+//    free(p2-m*n);  // 同上
+//    return 0;
+//}
+
+// 1.8.07
+//int main(void)
+//{
+//    return 0;
 //}
 
 //1.8.09
